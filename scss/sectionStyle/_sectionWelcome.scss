@@ -1,0 +1,18 @@
+@import 'variables';
+
+.section__welcome{
+    justify-content: center;
+    text-align: center;
+    height: 30rem;
+
+    .section__main{
+        justify-self: center;
+        
+            p{
+                width: 60vw;
+                text-align: center;
+            }
+    }
+
+
+}

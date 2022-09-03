@@ -1,0 +1,92 @@
+
+@import './sectionStyle/variables';
+@import './sectionStyle/headerFooter';
+@import './sectionStyle/sectionTattoo';
+@import './sectionStyle/sectionContact';
+@import './sectionStyle/sectionWelcome';
+@import './sectionStyle/sectionPiercing';
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+ul{
+    padding: 0;
+}
+
+body{
+    /*background-image: url("../img/background/backgroundbw1.jpg");*/
+    background-image: url("../img/background/backgroundbw2.jpg");
+    background-repeat: no-repeat;
+    /* background-position: top center; */
+    @extend %background;
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    font-size: 6rem;
+    color: white;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    justify-items: center;
+    font-size: 4rem;
+    margin: 2rem auto;
+}
+
+h3{
+    text-align: center;
+    justify-items: center;
+    font-size: 2rem;
+}
+
+
+.empty1{
+    height: 60rem;
+    background-color: none;
+}
+
+.empty2{
+    height: 30rem;
+    background-color: none;
+}
+
+.empty3{
+    height: 30rem;
+    background-color: none;    
+    background-image: url("../img/logo/hilikuslogo.png");
+    @extend %background;
+    background-color: black;
+}
+
+.section{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: auto;
+    background-color: white;
+}
+
+.socialMedia__icon img{
+    height: 2rem;
+    width: 2rem;
+}  
+
+
+
+
+
+

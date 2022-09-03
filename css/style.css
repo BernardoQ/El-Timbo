@@ -1,0 +1,538 @@
+body, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.section__tattoo, .section__piercing {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+  .section__tattoo .main__artist, .section__piercing .main__artist {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5rem; }
+    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+      height: 30rem;
+      width: auto;
+      border-radius: 15px; }
+    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+      display: flex;
+      justify-content: space-evenly; }
+    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+      text-align: center; }
+
+body, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.section__tattoo, .section__piercing {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+  .section__tattoo .main__artist, .section__piercing .main__artist {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5rem; }
+    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+      height: 30rem;
+      width: auto;
+      border-radius: 15px; }
+    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+      display: flex;
+      justify-content: space-evenly; }
+    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+      text-align: center; }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.header__content {
+  display: inline-flex;
+  list-style: none; }
+
+.header__content li {
+  padding: 1rem; }
+
+.header__content li a {
+  padding: 1rem;
+  color: white; }
+
+footer {
+  height: 20rem;
+  background-color: grey; }
+
+body, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.section__tattoo, .section__piercing {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+  .section__tattoo .main__artist, .section__piercing .main__artist {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5rem; }
+    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+      height: 30rem;
+      width: auto;
+      border-radius: 15px; }
+    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+      display: flex;
+      justify-content: space-evenly; }
+    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+      text-align: center; }
+
+.section__tattoo .tattoo__artist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  justify-content: center;
+  margin: auto; }
+  .section__tattoo .tattoo__artist .artist__card {
+    justify-self: center;
+    margin: 3rem 0; }
+    .section__tattoo .tattoo__artist .artist__card img {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 15px; }
+    .section__tattoo .tattoo__artist .artist__card .artist__card--info {
+      list-style: none;
+      text-align: center; }
+
+.section__tattoo .work__gallery {
+  margin-top: 4rem; }
+  .section__tattoo .work__gallery .work__gallery--img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 1rem auto 3rem auto; }
+    .section__tattoo .work__gallery .work__gallery--img img {
+      width: 25rem;
+      height: 25rem;
+      border-radius: 15px; }
+
+.artist__card--content {
+  position: relative;
+  margin: auto; }
+
+.artist__card--content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  left: 0;
+  top: 60%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 15px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s; }
+
+.artist__card--content:hover .content-overlay {
+  opacity: 1; }
+
+.artist__card--img {
+  width: 100%; }
+
+.profile--contact {
+  position: absolute;
+  text-align: center;
+  display: grid;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  bottom: 1%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+  .profile--contact .contact__icon {
+    margin: auto;
+    background-color: white;
+    border-radius: 35px; }
+    .profile--contact .contact__icon .icon--img {
+      width: 4rem;
+      height: 4rem; }
+
+.artist__card--content:hover .profile--contact {
+  bottom: 10%;
+  left: 50%;
+  opacity: 1; }
+
+.profile--contact a {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase; }
+
+.fadeIn-bottom {
+  bottom: 75%; }
+
+.artist__card .artist__card--content {
+  position: relative;
+  margin: auto; }
+
+.artist__card .artist__card--content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 28%;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 15px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s; }
+
+.artist__card .artist__card--content:hover .content-overlay {
+  opacity: 1; }
+
+.artist__card .artist__card--img {
+  width: 100%; }
+
+.artist__card .profile--contact {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 90%;
+  bottom: 1%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+  .artist__card .profile--contact .contact__icon {
+    margin: auto auto 1.5rem auto;
+    background-color: white;
+    border-radius: 35px; }
+    .artist__card .profile--contact .contact__icon .icon--img {
+      width: 3rem;
+      height: 3rem; }
+
+.artist__card .artist__card--content:hover .profile--contact {
+  bottom: 10%;
+  left: 50%;
+  opacity: 1; }
+
+.artist__card .profile--contact a {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase; }
+
+.artist__card .fadeIn-bottom {
+  bottom: 75%; }
+
+a {
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.text-black {
+  color: #000; }
+
+.content {
+  padding: 7rem 0; }
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 900; }
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  background: none; }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000; }
+
+.col-form-label {
+  color: #000;
+  font-size: 13px; }
+
+.btn, .form-control, .custom-select {
+  height: 45px; }
+
+.custom-select:active, .custom-select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #000; }
+
+.btn {
+  border: none;
+  border-radius: 0;
+  font-size: 12px;
+  letter-spacing: .2rem;
+  text-transform: uppercase; }
+  .btn.btn-primary {
+    background: black;
+    color: white;
+    padding: 15px 20px; }
+  .btn:hover {
+    color: white; }
+  .btn:active, .btn:focus {
+    outline: none;
+    box-shadow: none; }
+
+.contact-wrap .col-form-label {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0 0 10px 0;
+  display: inline-block;
+  padding: 0; }
+
+.contact-wrap .form, .contact-wrap .contact-info {
+  padding: 40px; }
+
+.contact-wrap .contact-info {
+  color: rgba(255, 255, 255, 0.5); }
+  .contact-wrap .contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5); }
+    .contact-wrap .contact-info ul li .wrap-icon {
+      font-size: 20px;
+      color: white;
+      margin-top: 5px; }
+
+.contact-wrap .form {
+  background: white; }
+  .contact-wrap .form h3 {
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 30px; }
+
+.contact-wrap .contact-info {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .contact-wrap .contact-info a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .contact-wrap .contact-info h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px; }
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold; }
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
+
+body, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.section__tattoo, .section__piercing {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+  .section__tattoo .main__artist, .section__piercing .main__artist {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5rem; }
+    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+      height: 30rem;
+      width: auto;
+      border-radius: 15px; }
+    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+      display: flex;
+      justify-content: space-evenly; }
+    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+      text-align: center; }
+
+.section__welcome {
+  justify-content: center;
+  text-align: center;
+  height: 30rem; }
+  .section__welcome .section__main {
+    justify-self: center; }
+    .section__welcome .section__main p {
+      width: 60vw;
+      text-align: center; }
+
+body, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.section__tattoo, .section__piercing {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+  .section__tattoo .main__artist, .section__piercing .main__artist {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5rem; }
+    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+      height: 30rem;
+      width: auto;
+      border-radius: 15px; }
+    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+      display: flex;
+      justify-content: space-evenly; }
+    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+      text-align: center; }
+
+.section__piercing .tattoo__artist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  justify-content: center;
+  margin: auto; }
+  .section__piercing .tattoo__artist .artist__card {
+    justify-self: center;
+    margin: 3rem 0; }
+    .section__piercing .tattoo__artist .artist__card img {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 15px; }
+    .section__piercing .tattoo__artist .artist__card .artist__card--info {
+      list-style: none;
+      text-align: center; }
+
+.section__piercing .work__gallery {
+  margin-top: 4rem; }
+  .section__piercing .work__gallery .work__gallery--img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 1rem auto 3rem auto; }
+    .section__piercing .work__gallery .work__gallery--img img {
+      width: 25rem;
+      height: 25rem;
+      border-radius: 15px; }
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem; }
+
+ul {
+  padding: 0; }
+
+body {
+  /*background-image: url("../img/background/backgroundbw1.jpg");*/
+  background-image: url("../img/background/backgroundbw2.jpg");
+  background-repeat: no-repeat;
+  /* background-position: top center; */
+  background-color: black; }
+
+h1 {
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  font-size: 6rem;
+  color: white;
+  margin: auto; }
+
+h2 {
+  text-align: center;
+  justify-items: center;
+  font-size: 4rem;
+  margin: 2rem auto; }
+
+h3 {
+  text-align: center;
+  justify-items: center;
+  font-size: 2rem; }
+
+.empty1 {
+  height: 60rem;
+  background-color: none; }
+
+.empty2 {
+  height: 30rem;
+  background-color: none; }
+
+.empty3 {
+  height: 30rem;
+  background-color: none;
+  background-image: url("../img/logo/hilikuslogo.png");
+  background-color: black; }
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+
+.socialMedia__icon img {
+  height: 2rem;
+  width: 2rem; }
