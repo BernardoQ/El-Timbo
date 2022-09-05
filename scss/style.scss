@@ -22,9 +22,8 @@ ul{
     padding: 0;
 }
 
-body{
-    /*background-image: url("../img/background/backgroundbw1.jpg");*/
-    background-image: url("../img/background/backgroundbw2.jpg");
+body{    
+    background-image: url("../img/chorizos.jpg");
     background-repeat: no-repeat;
     /* background-position: top center; */
     @extend %background;
@@ -60,14 +59,19 @@ h3{
 }
 
 .empty2{
+    background-image: url("../img/sandwich.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    backdrop-filter: blur(15px);
+    /* background-position: top center; */
+    @extend %background;
     height: 30rem;
-    background-color: none;
 }
 
 .empty3{
     height: 30rem;
     background-color: none;    
-    background-image: url("../img/logo/hilikuslogo.png");
+    background-image: url("");
     @extend %background;
     background-color: black;
 }
@@ -84,6 +88,17 @@ h3{
     height: 2rem;
     width: 2rem;
 }  
+
+.agregarProducto{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .boton{
+        width: 50px;
+    }
+}
+
 
 
 

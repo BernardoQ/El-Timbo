@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- CSS STYLE -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Hilikus tattoo</title>
+    <title>El Timbo</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -21,10 +21,10 @@
                 <a href="">Nosotros</a>
             </li>
             <li class="">
-                <a href="">Galeria</a>
+                <a href="">Productos</a>
             </li>
             <li class="">
-                <a href="">Productos</a>
+                <a href="">Galeria</a>
             </li>
             <li class="">
                 <a href="">Contacto</a>
@@ -49,21 +49,75 @@
     <!-- DIV EMPTY/BACKGROUND -->
     <div class="empty3"></div>
     
-    <!-- SECTION GALERIA -->
+    <!-- SECTION PRODUCTOS -->
     <section class="section section__tattoo">
-        <h2>GALERIA</h2>
-        <div class="work__gallery">
-            <h3>Galeria</h3>
+        <h2>PRODUCTOS</h2>
+        <div id="productos" class="work__gallery">
+            <h3>Productos</h3>
             <ul class="work__gallery--img">
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
+                <li class="productosComprar" id="1">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton" onclick="imprimir1()">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="2">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton" onclick="imprimir2()">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="3">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton" onclick="imprimir3()">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="4">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton" onclick="imprimir4()">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="5">
+                    <img src="./img/pernil.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton" onclick="imprimir5()">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="6">
+                    <img src="./img/pernil.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton" onclick="imprimir6()">+</button>
+                    </div>
+                </li>
+                <!-- <li class="productosComprar" id="7">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="8">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton">+</button>
+                    </div>
+                </li>
+                <li class="productosComprar" id="9">
+                    <img src="./img/chorizos.jpg" alt="">
+                    <div class="agregarProducto">
+                        <p>Agregar</p>
+                        <button class="boton">+</button>
+                    </div>
+                </li> -->
             </ul>
         </div>
     </section>
@@ -71,22 +125,16 @@
     <!-- DIV EMPTY/BACKGROUND -->
     <div class="empty2"></div>
 
-    <!-- SECTION PIERCINGS -->
+    <!-- SECTION GALERIA -->
     <section class="section section__piercing">
-        <h2>PRODUCTOS</h2>        
+        <h2>GALERIA</h2>        
         <div class="main__artist">
         <div class="work__gallery">
-            <h3>Trabajos</h3>
+            <h3>Galeria</h3>
             <ul class="work__gallery--img">
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
+                <li><img src="./img/chorizos.jpg" alt=""></li>
+                <li><img src="./img/chorizos.jpg" alt=""></li>
+                <li><img src="./img/chorizos.jpg" alt=""></li>
             </ul>
         </div>      
     </section>
@@ -105,6 +153,6 @@
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-    <script src="./js/"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
