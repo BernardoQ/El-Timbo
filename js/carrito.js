@@ -1,3 +1,4 @@
+
 let productos = [
     {"name": "Chorizo clasico", "price": 550, "id":"prod1"},
     {"name": "Chorizo ahumado", "price": 550, "id":"prod2"},
@@ -13,7 +14,7 @@ let productos = [
 let productoUno = {"name": "Chorizo clasico", "price": " $550", "id":"prod1"};
 let productoDos = {"name": "Chorizo ahumado", "price": " $550", "id":"prod2"};
 let productoTres = {"name": "Chorizo queso azul", "price":" $550", "id":"prod3"};
-let productoCuatro = {"name": "Chorizo morrones", "price":" $550", "id":"prod4"};
+let productoCuatro = {"name": "Chorizo con morrones", "price":" $550", "id":"prod4"};
 let productoCinco = {"name": "Pernil pequeño", "price":" $3550", "id":"prod5"};
 let productoSeis = {"name": "Pernil mediano", "price": " $4550", "id":"prod6"};
 
@@ -33,31 +34,33 @@ for(let i=0; i < productos.length; i++){
 };
 
 function  obtenerId(){
-    document.querySelectorAll(".click").forEach(el => {
+    let imprimir =
 
-        el.addEventListener("click", e => {
-    
-        const id = e.target.getAttribute("id");
+        document.querySelectorAll(".click").forEach(el => {
+        el.addEventListener("click", e => {    
+        const id = e.target.getAttribute("id");        
 
         if(id == productoUno["id"]){
-            console.log(productoUno["name"]+ " cuesta" + productoUno["price"] );
-
+            document.getElementById("carrito__ul").innerHTML =(productoUno["name"]+ "" + productoUno["price"] );                    
+        
         } else if (id == productoDos["id"]) {
-            console.log(productoDos["name"]+ " cuesta" + productoDos["price"] );
+            document.getElementById("carrito__ul").innerHTML =(productoDos["name"]+ "" + productoDos["price"] );
 
         }  else if (id == productoTres["id"]) {
-            console.log(productoTres["name"]+ " cuesta" + productoTres["price"] );
+            document.getElementById("carrito__ul").innerHTML =(productoTres["name"]+ "" + productoTres["price"] );
 
         }  else if (id == productoCuatro["id"]) {
-            console.log(productoCuatro["name"]+ " cuesta" + productoCuatro["price"] );
+            document.getElementById("carrito__ul").innerHTML =(productoCuatro["name"]+ "" + productoCuatro["price"] );
 
         }  else if (id == productoCinco["id"]) {
-            console.log(productoCinco["name"]+ " cuesta" + productoCinco["price"] );
+            document.getElementById("carrito__ul").innerHTML =(productoCinco["name"]+ "" + productoCinco["price"] );
 
         }  else if (id == productoSeis["id"]) 
-            console.log(productoSeis["name"]+ " cuesta" + productoSeis["price"] );
-                  
-        });  
+        document.getElementById("carrito__ul").innerHTML =(productoSeis["name"]+ "" + productoSeis["price"] );
+        });
     });
 };
+obtenerId();
+
+
 

@@ -4,8 +4,6 @@
     @extend %mainArtistCard; 
 
     .tattoo__artist{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         column-gap: 3rem;
         justify-content: center;
         margin: auto;
@@ -28,24 +26,45 @@
         }
     }
 
-    .products__gallery{
-        margin-top: 4rem;
-    
-        .products__gallery--img{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.2rem;
-            justify-content: space-around;
-            justify-items: center;
-            margin: 1rem auto 3rem auto;
-    
-            img{
-                width: 25rem;
-                height: 20rem;
-                border-radius: 15px;
-            }
-        }
+    .container{
+      display: inline-flex;
+      min-width: fit-content;
+      margin-left: 1rem;
+      margin-right: 1rem;
         
+        .products__gallery{
+          margin-top: 4rem;
+      
+          .products__gallery--img{
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 0.2rem;
+              justify-content: space-around;
+              justify-items: center;
+              margin: 1rem auto 3rem auto;
+      
+              img{
+                  width: 25rem;
+                  height: 20rem;
+                  border-radius: 15px;
+              }
+          }
+          
+        };
+
+        .carrito{
+          margin: 2rem;
+          position: fixed;
+          padding-left: 50rem;
+          width: fit-content;
+          text-align: start;
+
+          h2{
+            font-size: 2rem;
+            text-align: start;
+          }
+
+        }
     }
 }  
 
