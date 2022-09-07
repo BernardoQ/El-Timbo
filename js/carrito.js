@@ -19,10 +19,14 @@ let productoCinco = {"name": "Pernil pequeño", "price":" $3550", "id":"prod5"};
 let productoSeis = {"name": "Pernil mediano", "price": " $4550", "id":"prod6"};
 
 
-//let productoPrecios = productos.forEach(element => console.log(element.price));
-//let productoIds = productos.forEach(element => console.log(element.id));
-//const escuchar = (document.getElementsByClassName("click")[0].id);
-//console.log(escuchar);
+let productoPrecios = productos.forEach(element => console.log(element.price));
+let productoIds = productos.forEach(element => console.log(element.id));
+let productoNombres = productos.forEach(element => console.log(element.name));
+const escuchar = (document.getElementsByClassName("click")[0].id);
+console.log(escuchar);
+
+let chorizos = productos.slice(0, 4);
+console.log(chorizos);
 
 let precioProducto = productos.map(function(producto) {
     return producto.price;
@@ -33,6 +37,8 @@ for(let i=0; i < productos.length; i++){
     console.log(productos[i]); 
 };
 
+
+//FUNCION QUE PINTA PRODUCTOS EN CARRITO
 function  obtenerId(){
     let imprimir =
 
