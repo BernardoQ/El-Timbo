@@ -1,6 +1,6 @@
 @import './variables';
 
-.section__tattoo{
+.section__products{
     @extend %mainArtistCard; 
 
     .tattoo__artist{
@@ -28,10 +28,10 @@
         }
     }
 
-    .work__gallery{
+    .products__gallery{
         margin-top: 4rem;
     
-        .work__gallery--img{
+        .products__gallery--img{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0.2rem;

@@ -4,24 +4,24 @@ body, .empty2, .empty3 {
   background-size: contain;
   background-attachment: fixed; }
 
-.section__tattoo, .section__piercing {
+.section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   margin: auto;
   background-color: white; }
-  .section__tattoo .main__artist, .section__piercing .main__artist {
+  .section__products .main__artist, .section__gallery .main__artist {
     margin: auto;
     text-align: center;
     margin-bottom: 5rem; }
-    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+    .section__products .main__artist img, .section__gallery .main__artist img {
       height: 20rem;
       width: auto;
       border-radius: 15px; }
-    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
       display: flex;
       justify-content: space-evenly; }
-    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
       text-align: center; }
 
 body, .empty2, .empty3 {
@@ -30,24 +30,24 @@ body, .empty2, .empty3 {
   background-size: contain;
   background-attachment: fixed; }
 
-.section__tattoo, .section__piercing {
+.section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   margin: auto;
   background-color: white; }
-  .section__tattoo .main__artist, .section__piercing .main__artist {
+  .section__products .main__artist, .section__gallery .main__artist {
     margin: auto;
     text-align: center;
     margin-bottom: 5rem; }
-    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+    .section__products .main__artist img, .section__gallery .main__artist img {
       height: 20rem;
       width: auto;
       border-radius: 15px; }
-    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
       display: flex;
       justify-content: space-evenly; }
-    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
       text-align: center; }
 
 .header {
@@ -76,53 +76,53 @@ body, .empty2, .empty3 {
   background-size: contain;
   background-attachment: fixed; }
 
-.section__tattoo, .section__piercing {
+.section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   margin: auto;
   background-color: white; }
-  .section__tattoo .main__artist, .section__piercing .main__artist {
+  .section__products .main__artist, .section__gallery .main__artist {
     margin: auto;
     text-align: center;
     margin-bottom: 5rem; }
-    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+    .section__products .main__artist img, .section__gallery .main__artist img {
       height: 20rem;
       width: auto;
       border-radius: 15px; }
-    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
       display: flex;
       justify-content: space-evenly; }
-    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
       text-align: center; }
 
-.section__tattoo .tattoo__artist {
+.section__products .tattoo__artist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
   justify-content: center;
   margin: auto; }
-  .section__tattoo .tattoo__artist .artist__card {
+  .section__products .tattoo__artist .artist__card {
     justify-self: center;
     margin: 3rem 0; }
-    .section__tattoo .tattoo__artist .artist__card img {
+    .section__products .tattoo__artist .artist__card img {
       width: 15rem;
       height: 15rem;
       border-radius: 15px; }
-    .section__tattoo .tattoo__artist .artist__card .artist__card--info {
+    .section__products .tattoo__artist .artist__card .artist__card--info {
       list-style: none;
       text-align: center; }
 
-.section__tattoo .work__gallery {
+.section__products .products__gallery {
   margin-top: 4rem; }
-  .section__tattoo .work__gallery .work__gallery--img {
+  .section__products .products__gallery .products__gallery--img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.2rem;
     justify-content: space-around;
     justify-items: center;
     margin: 1rem auto 3rem auto; }
-    .section__tattoo .work__gallery .work__gallery--img img {
+    .section__products .products__gallery .products__gallery--img img {
       width: 25rem;
       height: 20rem;
       border-radius: 15px; }
@@ -386,24 +386,24 @@ body, .empty2, .empty3 {
   background-size: contain;
   background-attachment: fixed; }
 
-.section__tattoo, .section__piercing {
+.section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   margin: auto;
   background-color: white; }
-  .section__tattoo .main__artist, .section__piercing .main__artist {
+  .section__products .main__artist, .section__gallery .main__artist {
     margin: auto;
     text-align: center;
     margin-bottom: 5rem; }
-    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+    .section__products .main__artist img, .section__gallery .main__artist img {
       height: 20rem;
       width: auto;
       border-radius: 15px; }
-    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
       display: flex;
       justify-content: space-evenly; }
-    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
       text-align: center; }
 
 .section__welcome {
@@ -422,53 +422,53 @@ body, .empty2, .empty3 {
   background-size: contain;
   background-attachment: fixed; }
 
-.section__tattoo, .section__piercing {
+.section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   margin: auto;
   background-color: white; }
-  .section__tattoo .main__artist, .section__piercing .main__artist {
+  .section__products .main__artist, .section__gallery .main__artist {
     margin: auto;
     text-align: center;
     margin-bottom: 5rem; }
-    .section__tattoo .main__artist img, .section__piercing .main__artist img {
+    .section__products .main__artist img, .section__gallery .main__artist img {
       height: 20rem;
       width: auto;
       border-radius: 15px; }
-    .section__tattoo .main__artist .profile--contact, .section__piercing .main__artist .profile--contact {
+    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
       display: flex;
       justify-content: space-evenly; }
-    .section__tattoo .main__artist .artist__card--info, .section__piercing .main__artist .artist__card--info {
+    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
       text-align: center; }
 
-.section__piercing .tattoo__artist {
+.section__gallery .tattoo__artist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
   justify-content: center;
   margin: auto; }
-  .section__piercing .tattoo__artist .artist__card {
+  .section__gallery .tattoo__artist .artist__card {
     justify-self: center;
     margin: 3rem 0; }
-    .section__piercing .tattoo__artist .artist__card img {
+    .section__gallery .tattoo__artist .artist__card img {
       width: 15rem;
       height: 15rem;
       border-radius: 15px; }
-    .section__piercing .tattoo__artist .artist__card .artist__card--info {
+    .section__gallery .tattoo__artist .artist__card .artist__card--info {
       list-style: none;
       text-align: center; }
 
-.section__piercing .work__gallery {
+.section__gallery .work__gallery {
   margin-top: 4rem; }
-  .section__piercing .work__gallery .work__gallery--img {
+  .section__gallery .work__gallery .work__gallery--img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.2rem;
     justify-content: space-around;
     justify-items: center;
     margin: 1rem auto 3rem auto; }
-    .section__piercing .work__gallery .work__gallery--img img {
+    .section__gallery .work__gallery .work__gallery--img img {
       width: 25rem;
       height: 20rem;
       border-radius: 15px; }
@@ -490,7 +490,7 @@ body {
   background-image: url("../img/chorizos.jpg");
   background-repeat: no-repeat;
   /* background-position: top center; */
-  background-color: black; }
+  background-color: #192436; }
 
 h1 {
   text-align: center;
@@ -527,7 +527,7 @@ h3 {
   height: 30rem;
   background-color: none;
   background-image: url("");
-  background-color: black; }
+  background-color: #192436; }
 
 .section {
   display: grid;
