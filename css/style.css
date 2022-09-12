@@ -53,18 +53,22 @@ body, .empty2, .empty3 {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
-
-.header__content {
-  display: inline-flex;
-  list-style: none; }
-
-.header__content li {
-  padding: 1rem; }
-
-.header__content li a {
-  padding: 1rem;
-  color: white; }
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  height: 4rem;
+  background-color: #AE9A64;
+  position: fixed; }
+  .header .header__content {
+    display: inline-flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 70%; }
+    .header .header__content .header__content li {
+      margin: auto; }
+      .header .header__content .header__content li .header__content li a {
+        padding: 0.5rem;
+        color: #192436; }
 
 footer {
   height: 20rem;
@@ -96,54 +100,29 @@ body, .empty2, .empty3 {
     .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
       text-align: center; }
 
-.section__products .tattoo__artist {
-  column-gap: 3rem;
-  justify-content: center;
-  margin: auto; }
-  .section__products .tattoo__artist .artist__card {
-    justify-self: center;
-    margin: 3rem 0; }
-    .section__products .tattoo__artist .artist__card img {
-      width: 15rem;
-      height: 15rem;
-      border-radius: 15px; }
-    .section__products .tattoo__artist .artist__card .artist__card--info {
-      list-style: none;
-      text-align: center; }
+.section__products h2 {
+  margin-top: 5rem; }
 
-.section__products .container {
-  display: inline-flex;
-  min-width: fit-content;
-  margin-left: 1rem;
-  margin-right: 1rem; }
-  .section__products .container .products__gallery {
-    margin-top: 4rem; }
-    .section__products .container .products__gallery .products__gallery--img {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.2rem;
-      justify-content: space-around;
-      justify-items: center;
-      margin: 1rem auto 3rem auto; }
-      .section__products .container .products__gallery .products__gallery--img img {
-        width: 25rem;
-        height: 20rem;
-        border-radius: 15px; }
-  .section__products .container .carrito {
-    margin: 2rem;
-    position: fixed;
-    padding-left: 50rem;
-    width: fit-content;
-    text-align: start; }
-    .section__products .container .carrito h2 {
-      font-size: 2rem;
-      text-align: start; }
+.products__container .products__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.1rem;
+  row-gap: 4rem;
+  width: 80%;
+  justify-content: space-around;
+  justify-items: center;
+  margin: 1rem auto 3rem auto;
+  margin-top: 4rem; }
+  .products__container .products__gallery .cards img {
+    width: 17rem;
+    height: 14rem;
+    border-radius: 15px; }
 
-.artist__card--content {
+.products__card--content {
   position: relative;
   margin: auto; }
 
-.artist__card--content .content-overlay {
+.products__card--content .content-overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 40%;
@@ -158,10 +137,10 @@ body, .empty2, .empty3 {
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s; }
 
-.artist__card--content:hover .content-overlay {
+.products__card--content:hover .content-overlay {
   opacity: 1; }
 
-.artist__card--img {
+.products__card--img {
   width: 100%; }
 
 .profile--contact {
@@ -188,7 +167,7 @@ body, .empty2, .empty3 {
       width: 4rem;
       height: 4rem; }
 
-.artist__card--content:hover .profile--contact {
+.products__card--content:hover .profile--contact {
   bottom: 10%;
   left: 50%;
   opacity: 1; }
@@ -203,11 +182,11 @@ body, .empty2, .empty3 {
 .fadeIn-bottom {
   bottom: 75%; }
 
-.artist__card .artist__card--content {
+.products__card .products__card--content {
   position: relative;
   margin: auto; }
 
-.artist__card .artist__card--content .content-overlay {
+.products__card .products__card--content .content-overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 28%;
@@ -222,13 +201,13 @@ body, .empty2, .empty3 {
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s; }
 
-.artist__card .artist__card--content:hover .content-overlay {
+.products__card .products__card--content:hover .content-overlay {
   opacity: 1; }
 
-.artist__card .artist__card--img {
+.products__card .products__card--img {
   width: 100%; }
 
-.artist__card .profile--contact {
+.products__card .profile--contact {
   position: absolute;
   text-align: center;
   display: flex;
@@ -244,153 +223,28 @@ body, .empty2, .empty3 {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s; }
-  .artist__card .profile--contact .contact__icon {
+  .products__card .profile--contact .contact__icon {
     margin: auto auto 1.5rem auto;
     background-color: white;
     border-radius: 35px; }
-    .artist__card .profile--contact .contact__icon .icon--img {
+    .products__card .profile--contact .contact__icon .icon--img {
       width: 3rem;
       height: 3rem; }
 
-.artist__card .artist__card--content:hover .profile--contact {
+.products__card .products__card--content:hover .profile--contact {
   bottom: 10%;
   left: 50%;
   opacity: 1; }
 
-.artist__card .profile--contact a {
+.products__card .profile--contact a {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
   text-transform: uppercase; }
 
-.artist__card .fadeIn-bottom {
+.products__card .fadeIn-bottom {
   bottom: 75%; }
-
-a {
-  transition: .3s all ease; }
-  a, a:hover {
-    text-decoration: none !important; }
-
-.text-black {
-  color: #000; }
-
-.content {
-  padding: 7rem 0; }
-
-.heading {
-  font-size: 2.5rem;
-  font-weight: 900; }
-
-.form-control {
-  border: none;
-  border-bottom: 1px solid #ccc;
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: 0;
-  background: none; }
-  .form-control:active, .form-control:focus {
-    outline: none;
-    box-shadow: none;
-    border-color: #000; }
-
-.col-form-label {
-  color: #000;
-  font-size: 13px; }
-
-.btn, .form-control, .custom-select {
-  height: 45px; }
-
-.custom-select:active, .custom-select:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: #000; }
-
-.btn {
-  border: none;
-  border-radius: 0;
-  font-size: 12px;
-  letter-spacing: .2rem;
-  text-transform: uppercase; }
-  .btn.btn-primary {
-    background: black;
-    color: white;
-    padding: 15px 20px; }
-  .btn:hover {
-    color: white; }
-  .btn:active, .btn:focus {
-    outline: none;
-    box-shadow: none; }
-
-.contact-wrap .col-form-label {
-  font-size: 14px;
-  color: #b3b3b3;
-  margin: 0 0 10px 0;
-  display: inline-block;
-  padding: 0; }
-
-.contact-wrap .form, .contact-wrap .contact-info {
-  padding: 40px; }
-
-.contact-wrap .contact-info {
-  color: rgba(255, 255, 255, 0.5); }
-  .contact-wrap .contact-info ul li {
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.5); }
-    .contact-wrap .contact-info ul li .wrap-icon {
-      font-size: 20px;
-      color: white;
-      margin-top: 5px; }
-
-.contact-wrap .form {
-  background: white; }
-  .contact-wrap .form h3 {
-    color: grey;
-    font-size: 20px;
-    margin-bottom: 30px; }
-
-.contact-wrap .contact-info {
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
-  .contact-wrap .contact-info a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; }
-  .contact-wrap .contact-info h3 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 30px; }
-
-label.error {
-  font-size: 12px;
-  color: red; }
-
-#message {
-  resize: vertical; }
-
-#form-message-warning, #form-message-success {
-  display: none; }
-
-#form-message-warning {
-  color: #B90B0B; }
-
-#form-message-success {
-  color: #55A44E;
-  font-size: 18px;
-  font-weight: bold; }
-
-.submitting {
-  float: left;
-  width: 100%;
-  padding: 10px 0;
-  display: none;
-  font-weight: bold;
-  font-size: 12px;
-  color: #000; }
 
 body, .empty2, .empty3 {
   background-repeat: no-repeat;
@@ -499,8 +353,11 @@ ul {
   padding: 0; }
 
 body {
-  background-image: url("../img/chorizos.jpg");
-  background-repeat: no-repeat;
+  background: url("../img/chorizos.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   /* background-position: top center; */
   background-color: #192436; }
 
@@ -524,8 +381,10 @@ h3 {
   font-size: 2rem; }
 
 .empty1 {
-  height: 60rem;
-  background-color: none; }
+  height: 50rem;
+  background-color: none;
+  margin: auto;
+  padding-top: 5rem; }
 
 .empty2 {
   background-image: url("../img/sandwich.jpg");

@@ -29,18 +29,24 @@
             <li class="">
                 <a href="">Contacto</a>
             </li>
+            <li class="">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="" class="bi bi-cart2" viewBox="0 0 16 16">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </header>
 
     <!-- SECTION PRODUCTOS -->
     <section class="section__products">
         <h2>PRODUCTOS</h2>
-        <div class="container">
-            <div id="productos" class="products__gallery">
-                <h3>Productos</h3>
-                <ul class="products__gallery--img">
-    
-                    <li class="productosComprar" >
+        <div class="products__container">
+            <h3>Productos</h3>
+            <div>              
+                <ul id="prodList" class="products__gallery">    
+                    <li class="cards" >
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto" >
                             <p>Agregar</p>
@@ -48,7 +54,7 @@
                         </div>
                     </li>
     
-                    <li class="productosComprar" >
+                    <li class="cards">
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
@@ -56,7 +62,7 @@
                         </div>
                     </li>
     
-                    <li class="productosComprar">
+                    <li class="cards">
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
@@ -64,42 +70,47 @@
                         </div>
                     </li>
     
-                    <li class="productosComprar">
+                    <!-- <li class="cards">
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
                             <button class="boton click" id="prod4">+</button>
                         </div>
                     </li>
-                    <li class="productosComprar">
+
+                    <li class="cards">
                         <img src="../img/pernil.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
                             <button class="boton click" id="prod5">+</button>
                         </div>
                     </li>
-                    <li class="productosComprar">
+                    
+                    <li class="cards">
                         <img src="../img/pernil.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
                             <button class="boton click" id="prod6">+</button>
                         </div>
                     </li>
-                    <!-- <li class="productosComprar" id="prod7">
+
+                    <li class="cards" id="prod7">
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
                             <button class="boton">+</button>
                         </div>
                     </li>
-                    <li class="productosComprar" id="prod8">
+
+                    <li class="cards" id="prod8">
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
                             <button class="boton">+</button>
                         </div>
                     </li>
-                    <li class="productosComprar" id="prod9">
+
+                    <li class="cards" id="prod9">
                         <img src="../img/chorizos.jpg" alt="">
                         <div class="agregarProducto">
                             <p>Agregar</p>
@@ -107,13 +118,14 @@
                         </div>
                     </li> -->
                 </ul>
-            </div>
-    
-            <div  class="carrito">
-                <h2>CARRITO</h2>
-                <ul id="carrito__ul">
-                </ul>
-            </div>
+            </div>   
+        </div>
+
+        <div class="carrito">
+            <h2>CARRITO</h2>
+            <tr id="carrito__ul">
+                <td></td>
+            </tr>
         </div>
 
     </section>
@@ -131,6 +143,7 @@
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
+    <script src="../js/tienda.js"></script>
     <script src="../js/carrito.js"></script>
 
 
