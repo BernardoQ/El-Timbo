@@ -14,26 +14,29 @@ const carrito = [];
 
 //FUNCION QUE PINTA PRODUCTOS EN CARRITO
 function  agregarCarrito(){
-    let imprimir =
 
-            document.querySelectorAll(".click").forEach(el => {
-            el.addEventListener("click", e => {    
-            const id = e.target.getAttribute("id");    
-            
+        document.querySelectorAll(".click").forEach(el => {
+        el.addEventListener("click", e => {    
+        const id = e.target.getAttribute("id");
+        
             for(let i=0; i < productos.length; i++){
                 if(productos[i].id == id){
                 carrito.push(productos[i].name + " $" + productos[i].price);
-                //document.getElementById("carrito__ul").innerHTML =(carrito);
 
                 console.log(carrito);
                 console.log(productos[i].name + " $" + productos[i].price);
+
+                
                 }
             };
-
-        });
-    }
-)};
+        })
+    });
+};
 agregarCarrito();
 
   document.getElementById("carrito__ul").innerHTML =(agregarCarrito);
+
+
+
+
 
