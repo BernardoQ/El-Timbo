@@ -35,4 +35,5 @@ function  agregarCarrito(){
 )};
 agregarCarrito();
 
+  document.getElementById("carrito__ul").innerHTML =(agregarCarrito);
 
