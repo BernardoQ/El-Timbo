@@ -1,158 +1,123 @@
 @import './variables';
 
 .section__products{
-    @extend %mainArtistCard; 
-
-    .tattoo__artist{
-        column-gap: 3rem;
-        justify-content: center;
-        margin: auto;
-
-        .artist__card{
-            justify-self: center;
-            margin: 3rem 0;
-        
-            img{
-                width: 15rem;
-                height: 15rem;
-                border-radius: 15px;
-            }
-
-            .artist__card--info{
-                list-style: none;
-                text-align: center;
-            } 
-        
-        }
+    @extend %mainSection;
+    h2{
+      margin-top: 5rem;
     }
+}
 
-    .container{
-      display: inline-flex;
-      min-width: fit-content;
-      margin-left: 1rem;
-      margin-right: 1rem;
-        
-        .products__gallery{
-          margin-top: 4rem;
-      
-          .products__gallery--img{
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              gap: 0.2rem;
-              justify-content: space-around;
-              justify-items: center;
-              margin: 1rem auto 3rem auto;
-      
-              img{
-                  width: 25rem;
-                  height: 20rem;
-                  border-radius: 15px;
-              }
-          }
-          
-        };
+.products__container{
 
-        .carrito{
-          margin: 2rem;
-          position: fixed;
-          padding-left: 50rem;
-          width: fit-content;
-          text-align: start;
-
-          h2{
-            font-size: 2rem;
-            text-align: start;
-          }
-
-        }
-    }
-}  
-
-  .artist__card--content{
-    position: relative;
-    margin: auto;
-  }
-  
-  .artist__card--content .content-overlay {
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    height: 40%;
-    width: 100%;
-    left: 0;
-    top: 60%;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    border-radius: 15px;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-  }
-  
-  .artist__card--content:hover .content-overlay{
-    opacity: 1;
-  }
-  
-  .artist__card--img{
-    width: 100%;
-  }
-  
-  .profile--contact {
-    position: absolute;
-    text-align: center;
+  .products__gallery{
     display: grid;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
-    bottom: 1%;
-    left: 50%;
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-        .contact__icon{
-            margin: auto;
-            background-color: white;
-            border-radius: 35px;
-            .icon--img{
-                width: 4rem;
-                height: 4rem;
-            }
-        }
-    }
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.1rem;
+    row-gap: 4rem;
+    width: 80%;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 1rem auto 3rem auto;
+    margin-top: 4rem;      
+    
+      .cards{
+          img{
+              width: 17rem;
+              height: 14rem;
+              border-radius: 15px;
+          }
+      }          
+  };
+}
+
+.carrito{
+  height: fit-content;
+}
+
+
+
+.products__card--content{
+  position: relative;
+  margin: auto;
+}
   
-  .artist__card--content:hover .profile--contact{
-   bottom: 10%;
-    left: 50%;
-    opacity: 1;
-  }
+.products__card--content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  left: 0;
+  top: 60%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 15px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
   
-  .profile--contact a{
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;       
-
-  }
+.products__card--content:hover .content-overlay{
+  opacity: 1;
+}
   
-  .fadeIn-bottom{
-    bottom: 75%;
-  }
+.products__card--img{
+  width: 100%;
+}
+  
+.profile--contact {
+  position: absolute;
+  text-align: center;
+  display: grid;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  bottom: 1%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+      .contact__icon{
+          margin: auto;
+          background-color: white;
+          border-radius: 35px;
+          .icon--img{
+              width: 4rem;
+              height: 4rem;
+          }
+      }
+}
+  
+.products__card--content:hover .profile--contact{
+  bottom: 10%;
+  left: 50%;
+  opacity: 1;
+}
+  
+.profile--contact a{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
 
+.fadeIn-bottom{
+  bottom: 75%;
+}
 
-
-
-.artist__card{
-  .artist__card--content{
+//CARD ANIMATION
+.products__card{
+  .products__card--content{
     position: relative;
     margin: auto;
   }
   
-  .artist__card--content .content-overlay {
+  .products__card--content .content-overlay {
     background: rgba(0,0,0,0.7);
     position: absolute;
     height: 28%;
@@ -168,11 +133,11 @@
     transition: all 0.4s ease-in-out 0s;
   }
   
-  .artist__card--content:hover .content-overlay{
+  .products__card--content:hover .content-overlay{
     opacity: 1;
   }
   
-  .artist__card--img{
+  .products__card--img{
     width: 100%;
   }
   
@@ -203,7 +168,7 @@
         }
     }
   
-  .artist__card--content:hover .profile--contact{
+  .products__card--content:hover .profile--contact{
    bottom: 10%;
     left: 50%;
     opacity: 1;
@@ -214,8 +179,7 @@
     font-weight: 500;
     letter-spacing: 0.15em;
     margin-bottom: 0.5em;
-    text-transform: uppercase;       
-
+    text-transform: uppercase;
   }
   
   .fadeIn-bottom{

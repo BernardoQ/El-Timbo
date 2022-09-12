@@ -1,15 +1,14 @@
-
-let productos = [
+/*let productos = [
     {"name": "Chorizo clasico", "price": 550, "id":"prod1"},
     {"name": "Chorizo ahumado", "price": 550, "id":"prod2"},
     {"name": "Chorizo queso azul", "price": 550, "id":"prod3"},
     {"name": "Chorizo morrones", "price": 550, "id":"prod4"},
     {"name": "Pernil pequeño", "price": 3550, "id":"prod5"},
     {"name": "Pernil mediano", "price": 4550, "id":"prod6"},
-    //{"name": "Pernil grande", "price": 5550, "id":prod7},
-    //{"name": "Salame picado grueso", "price": 850, "id":prod8},
-    //{"name": "Salame picado fino", "price": 850, "id":prod9}
-]
+    {"name": "Pernil grande", "price": 5550, "id":"prod7"},
+    {"name": "Salame picado grueso", "price": 850, "id":"prod8"},
+    {"name": "Salame picado fino", "price": 850, "id":"prod9"}
+];
 
 let productoUno = {"name": "Chorizo clasico", "price": " $550", "id":"prod1"};
 let productoDos = {"name": "Chorizo ahumado", "price": " $550", "id":"prod2"};
@@ -33,18 +32,13 @@ let precioProducto = productos.map(function(producto) {
 });
 console.log(precioProducto);
 
-for(let i=0; i < productos.length; i++){
-    console.log(productos[i]); 
-};
-
-
 //FUNCION QUE PINTA PRODUCTOS EN CARRITO
 function  obtenerId(){
     let imprimir =
 
         document.querySelectorAll(".click").forEach(el => {
         el.addEventListener("click", e => {    
-        const id = e.target.getAttribute("id");        
+        const id = e.target.getAttribute("id");
 
         if(id == productoUno["id"]){
             document.getElementById("carrito__ul").innerHTML =(productoUno["name"]+ "" + productoUno["price"] );                    
@@ -68,5 +62,27 @@ function  obtenerId(){
 };
 obtenerId();
 
+  
+/*const productos = {
+    producto1: {
+      name: "Chorizo clasico",
+      price: "550",  
+      srcImg: "../img/chorizos.jpg",
+    },
+
+    producto2: {
+        name: "Chorizo ahumado",
+        price: "550",  
+        srcImg: "../img/chorizos.jpg",
+      },
+
+      producto3: {
+        name: "Chorizo queso azul",
+        price: "550",  
+        srcImg: "../img/chorizos.jpg",
+      },
+};
+
+const carrito= [];*/
 
 

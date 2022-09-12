@@ -1,7 +1,7 @@
 @import './variables';
 
 .section__gallery{
-    @extend %mainArtistCard; 
+    @extend %mainSection; 
 
     .tattoo__artist{
         display: grid;

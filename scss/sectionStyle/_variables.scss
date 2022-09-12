@@ -7,11 +7,12 @@
     background-attachment: fixed;
 }
 
+$brandColorOne: #192436;
+$headerColor: #AE9A64;
 
 $white: white;
 
-
-%mainArtistCard{
+%mainSection{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;

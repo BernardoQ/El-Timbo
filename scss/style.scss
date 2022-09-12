@@ -2,7 +2,6 @@
 @import './sectionStyle/variables';
 @import './sectionStyle/headerFooter';
 @import './sectionStyle/sectionProducts';
-@import './sectionStyle/sectionContact';
 @import './sectionStyle/sectionWelcome';
 @import './sectionStyle/sectionGallery';
 
@@ -23,11 +22,14 @@ ul{
 }
 
 body{    
-    background-image: url("../img/chorizos.jpg");
-    background-repeat: no-repeat;
+    background: url("../img/chorizos.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     /* background-position: top center; */
     @extend %background;
-    background-color: #192436;
+    background-color: $brandColorOne;
 }
 
 h1{
@@ -54,8 +56,10 @@ h3{
 
 
 .empty1{
-    height: 60rem;
+    height: 50rem;
     background-color: none;
+    margin: auto;
+    padding-top: 5rem;
 }
 
 .empty2{
