@@ -12,7 +12,7 @@ let productos = [
 
 const carrito = [];
 
-//FUNCION QUE PINTA PRODUCTOS EN CARRITO
+//FUNCION AGREGAR PRODUCTOS EN CARRITO
 function  agregarCarrito(){
 
     document.querySelectorAll(".click").forEach(el => {
@@ -38,17 +38,23 @@ function  agregarCarrito(){
 )};
 agregarCarrito();
 
+//FUNCION PINTAR PRODUCTOS EN CARRITO
 function pintarCarro(){
-    //let tablaCarrito = document.getElementById("carrito_tr");
-    //tablaCarrito.innerHTML = carrito;
-
     let tr = document.createElement("tr");
     for(let i = 0; i < carrito.length; i++ ){
         let td = document.createElement("td");        
         td.innerHTML = carrito[i];
         tr.appendChild(td);
     }
+
+    for (let i = carrito.length; i > 0; i--) {
+        carrito.pop();
+    }
     carrito_tr.appendChild(tr)
 };
 pintarCarro();
+
+
+
+
 

@@ -121,7 +121,7 @@ body, .empty2, .empty3 {
 .carrito {
   height: fit-content; }
   .carrito #carrito_tr {
-    text-align: center; }
+    text-align: left; }
 
 .products__card--content {
   position: relative;
