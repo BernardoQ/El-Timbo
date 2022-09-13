@@ -118,6 +118,11 @@ body, .empty2, .empty3 {
     height: 14rem;
     border-radius: 15px; }
 
+.carrito {
+  height: fit-content; }
+  .carrito #carrito_tr {
+    text-align: center; }
+
 .products__card--content {
   position: relative;
   margin: auto; }
