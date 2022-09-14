@@ -10,43 +10,74 @@ let productos = [
     {"name": "Salame picado fino", "price": 850, "id":"prod9"}
 ];
 
-const carrito = [];
+let carrito = [];
+const precio = [];
 const cantidad = [];
-const total = []; 
-//let nombreProducto = [];
-let precio = [];
+const total = [];
+const noHayProd = document.getElementById("noHayProd");
+const tBody = document.getElementById("carrito_tr");
 
 function nombreProducto(){
     for (const key in productos) {
         if (Object.hasOwnProperty.call(productos, key)) {
             const element = productos[key];
-            console.log(element);            
+            console.log(element.name);            
         }        
     }    
 };
-nombreProducto()
+nombreProducto();
+
+function precioProducto(){
+    for (const key in productos) {
+        if (Object.hasOwnProperty.call(productos, key)) {
+            const element = productos[key];
+            console.log(element.price);            
+        }        
+    }    
+};
+precioProducto();
+
+function idProducto(){
+    for (const key in productos) {
+        if (Object.hasOwnProperty.call(productos, key)) {
+            const element = productos[key];
+            console.log(element.id);            
+        }        
+    }    
+};
+idProducto();
 
 
-//FUNCION AGREGAR PRODUCTOS EN CARRITO
-function  agregarCarrito(){
+//FUNCION CAPTURAR CLICK PRODUCTOS EN CARRITO
+function  agregarFuncionBoton(){
     document.querySelectorAll(".click").forEach(el => {
-    el.addEventListener("click", e => {    
-    const id = e.target.getAttribute("id");    
+    el.addEventListener("click", element => {    
+    const id = element.target.getAttribute("id");    
             
         for(let i=0; i < productos.length; i++){
             if(productos[i].id == id){
-            carrito.push(productos[i].name + " $" + productos[i].price);
-            pintarCarro();            
-            //let tablaCarrito = document.getElementById("carrito_tr");
-            //tablaCarrito.innerHTML = carrito;            
-            //console.log(carrito);
-            //console.log(productos[i].name + " $" + productos[i].price);
-            }
+                //carrito.push(productos[i].name + " $" + productos[i].price);
+                carrito.push(productos[i].name)
+                precio.push(" $" + productos[i].price)
+                pintarCarro();
+                }
             };
         });
     }
 )};
-agregarCarrito();
+agregarFuncionBoton();
+
+function agCarrito(){   
+    let existe = carrito.some(productosSome => productosSome.id === productos.id);
+    if(existe===false){
+        productos.cantidad=1;
+        carrito.push(productos)
+    } else {
+        let producto.Find = carrito.find(producto => producto.id === producto.id)
+        productoFind.cantidad++
+;    }
+    
+}
 
 //FUNCION PINTAR PRODUCTOS EN CARRITO
 function pintarCarro(){
@@ -57,12 +88,42 @@ function pintarCarro(){
         tr.appendChild(td);
     }
 
+    for(let i = 0; i < precio.length; i++ ){
+        let td = document.createElement("td");        
+        td.innerHTML = precio[i];
+        tr.appendChild(td);
+    }
+
     for (let i = carrito.length; i > 0; i--) {
         carrito.pop();
     }
-    carrito_tr.appendChild(tr)
+
+    for (let i = precio.length; i > 0; i--) {
+        precio.pop();
+    }
+    carrito_tr.appendChild(tr)  
+    
 };
 pintarCarro();
 
-let sumarProductos = document.querySelectorAll("td");
+//FUNCION SUMAR PRECIOS PRODUCTOS EN CARRITO
+function sumarProductos(){
+
+}
+
+//FUNCION REMOVER MENSAJE DE CARRITO VACIO
+function noHayMensaje(){
+    if (carrito.length > 0){
+        document.getElementById("noHayProd").remove();
+    }
+}
+noHayMensaje();
+
+
+//FUNCION VACIAR PRODUCTOS EN CARRITO
+/*function vaciar(){
+    const vaciarCarritoBtn = document.getElementById("vaciar_carrito");
+    vaciarCarritoBtn.addEventListener("click",pintarCarro());
+};
+vaciar();*/
 
