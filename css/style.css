@@ -113,13 +113,16 @@ body, .empty2, .empty3 {
   justify-items: center;
   margin: 1rem auto 3rem auto;
   margin-top: 4rem; }
-  .products__container .products__gallery .cards img {
-    width: 17rem;
-    height: 14rem;
-    border-radius: 15px; }
+  .products__container .products__gallery .cards {
+    text-align: center; }
+    .products__container .products__gallery .cards img {
+      width: 17rem;
+      height: 14rem;
+      border-radius: 15px; }
 
 .carrito {
-  height: fit-content; }
+  height: fit-content;
+  justify-content: center; }
   .carrito #carrito_tr {
     text-align: left; }
 

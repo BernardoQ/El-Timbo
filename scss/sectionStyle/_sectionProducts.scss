@@ -21,6 +21,7 @@
     margin-top: 4rem;      
     
       .cards{
+        text-align: center;
           img{
               width: 17rem;
               height: 14rem;
@@ -32,6 +33,7 @@
 
 .carrito{
   height: fit-content;
+  justify-content: center;
 
     #carrito_tr{
       text-align: left;
