@@ -22,13 +22,13 @@ function crearCards(){
             <img src="${element.img}" alt="">
             <div class="agregarProducto">
                 <p>${element.name}</p>
-                <p>$${element.price}</p>      
+                <p class="producto_price">$${element.price}</p>      
             </div>
             <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
         </li>`
     })
     agregarFuncionAlBoton();
-}
+};
 
 //FUNCION AGREGAR EVENTO A BOTON 
 function agregarFuncionAlBoton(){
@@ -37,10 +37,10 @@ function agregarFuncionAlBoton(){
             agregarAlCarrito(producto)
         })
     })
-}
+};
 
 //FUNCION AGREGAR PRODUCTO AL CARRITO
-    function agregarAlCarrito(producto){
+function agregarAlCarrito(producto){
     let existe = carrito.some(prod=>prod.id === producto.id);
     if(existe===false){
         producto.cantidad = 1;
@@ -50,11 +50,8 @@ function agregarFuncionAlBoton(){
         let prodFind = carrito.find(prod=> prod.id===producto.id);
         prodFind.cantidad++;
     }
-    console.log(carrito);
     pintarCarrito();
-    totalCarrito()
-
-}
+};
 
 //FUNCION PINTAR CARRITO
 function pintarCarrito(){
@@ -62,19 +59,44 @@ function pintarCarrito(){
     carrito.forEach(prod=>{
         carritoDiv.innerHTML += 
         `<li>
+            <h6>Producto:</h6>
             <p>${prod.name}</p>
-            <p>CANTIDAD: ${prod.cantidad}</p>
-            <p>$${prod.price}</p>
+            <p>Cantidad: ${prod.cantidad}</p>
+            <p>Precio : $${prod.price*prod.cantidad}</p>
+            <button class="btnCarrito" id="btn-borrarUnSolo${prod.id}">-</button>            
             <button class="btnCarrito" id="btn-borrar${prod.id}">Borrar</button>
-            <button class="btnCarrito" id="btn-borrarUnoSolo${prod.id}">-</button>
+            <button class="btnCarrito" id="btn-agregarUnSolo${prod.id}">+</button>
         </li>`
-    })
+
+        const sumarTodos = carrito.map(prod => prod.price * prod.cantidad).reduce((prev, curr) => prev + curr, 0);
+        totalContainer.innerHTML =
+        `<li>
+        <strong><p id="totalCarrito">${sumarTodos}</p></strong>
+        </li>`
+
+
+    });
+
+    let mensajeCarrito = document.getElementById("carrito__footer");
+    if(carrito.length === 0){
+        totalContainer.innerHTML= "0";
+        mensajeCarrito.innerHTML =
+        `<li>
+        <strong><p id="mensajeCarrito">Carrito Vacio</p></strong>
+        </li>`
+    } else {
+        mensajeCarrito.innerHTML = "";
+    };
+
     localStorage.setItem("carrito",JSON.stringify(carrito))
-    borrarProducto()    
-}
+    borrarProducto()
+    agregarBorrarUno()
+};
+
+const totalContainer = document.getElementById("total");
 
 //FUNCION BORRAR PRODUCTOS DEL CARRITO
-function borrarProducto(){
+function borrarProducto(){    
     carrito.forEach(producto=>{
         document.querySelector(`#btn-borrar${producto.id}`).addEventListener("click",()=>{
             let indice = carrito.findIndex(element=>element.id===producto.id);
@@ -82,22 +104,31 @@ function borrarProducto(){
             pintarCarrito()
         })
     })
+};
+
+//FUNCION AUMENTAR-DISMINUIR PRODUCTOS DEL CARRITO
+function agregarBorrarUno(){
+    carrito.forEach(producto=>{
+        document.querySelector(`#btn-borrarUnSolo${producto.id}`).addEventListener("click",()=>{
+            let find = carrito.find(element=>element.cantidad===producto.cantidad);
+            find.cantidad--;
+            pintarCarrito()
+        })
+    });
+    
+    carrito.forEach(producto=>{
+        document.querySelector(`#btn-agregarUnSolo${producto.id}`).addEventListener("click",()=>{
+            let find = carrito.find(element=>element.cantidad===producto.cantidad);
+            find.cantidad++;
+            pintarCarrito()
+        })
+    });
 }
 
-//FUNCION SUMAR TOTAL CARRITO
-function totalCarrito(){
-   /* for(let i = 0; i < carrito.length; i++ ){
-        const total = Object.values(carrito).reduce((precio, {cantidad, price}) => precio + (cantidad * price),0);
-        console.log(total);
-    }*/
-    
-    if(Object.keys(carrito).length !== 0){
-        const total = Object.values(carrito).reduce((precio, {cantidad, price}) => precio + (cantidad * price),0);
-        console.log(total);
-    }
-}
 
 pintarCarrito();
 crearCards();
+
+
 
 
