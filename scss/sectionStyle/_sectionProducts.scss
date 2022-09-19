@@ -33,7 +33,7 @@
 
 #carrito{
   //display: none;
-  width: 10rem;
+  width:fit-content;
   height: fit-content;
   justify-content: center;
   font-size: 1rem;
@@ -42,3 +42,23 @@
   background-color: $brandColorOne;
 }
 
+
+#contenidoCarrito{
+  text-align: center;
+}
+
+.btnProductos{
+  width:max-content;
+}
+
+.carritoFooter{
+  vertical-align: top;
+  padding-top: 2rem;
+}
+
+.carrito__img{
+  img{
+    width: 3rem;
+    height: 2.5rem;
+  }
+}

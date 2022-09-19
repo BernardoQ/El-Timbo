@@ -12,6 +12,7 @@ let productos = [
 
 const containerDiv = document.querySelector(".products__gallery");
 const carritoDiv = document.querySelector("#carrito_tr");
+const totalContainer = document.getElementById("total");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //FUNCION CREAR CARDS DE PRODUCTOS
@@ -58,29 +59,39 @@ function pintarCarrito(){
     carritoDiv.innerHTML = "";
     carrito.forEach(prod=>{
         carritoDiv.innerHTML += 
-        `<li>
-            <h6>Producto:</h6>
-            <p>${prod.name}</p>
-            <p>Cantidad: ${prod.cantidad}</p>
-            <p>Precio : $${prod.price*prod.cantidad}</p>
+        `<td class="carrito__img"> 
+        <img src="${prod.img}" alt="">       
+        </td>        
+        <td>${prod.name}</td>
+        <td>$${prod.price}</td>
+        <td>${prod.cantidad}</td>
+        <td>$${prod.price*prod.cantidad}</td>
+               
+        <li class="btnProductos">  
             <button class="btnCarrito" id="btn-borrarUnSolo${prod.id}">-</button>            
             <button class="btnCarrito" id="btn-borrar${prod.id}">Borrar</button>
             <button class="btnCarrito" id="btn-agregarUnSolo${prod.id}">+</button>
         </li>`
 
+        //PINTAR TOTAL Y BOTON PAGO CARRITO
         const sumarTodos = carrito.map(prod => prod.price * prod.cantidad).reduce((prev, curr) => prev + curr, 0);
         totalContainer.innerHTML =
-        `<li>
-        <strong><p id="totalCarrito">${sumarTodos}</p></strong>
-        </li>`
-
-
+        `<td>
+        <strong><p id="totalCarrito">$${sumarTodos}</p></strong>
+        </td>
+        
+        <tr>
+            <a href="https://www.mercadopago.com.ar/home">
+                <button>Comprar</button>
+            </a>           
+        </tr>`
     });
 
+    //PINTAR MENSAJE CARRITO VACIO
     let mensajeCarrito = document.getElementById("carrito__footer");
     if(carrito.length === 0){
         totalContainer.innerHTML= "0";
-        mensajeCarrito.innerHTML =
+        mensajeCarrito.innerHTML +=
         `<li>
         <strong><p id="mensajeCarrito">Carrito Vacio</p></strong>
         </li>`
@@ -93,7 +104,7 @@ function pintarCarrito(){
     agregarBorrarUno()
 };
 
-const totalContainer = document.getElementById("total");
+
 
 //FUNCION BORRAR PRODUCTOS DEL CARRITO
 function borrarProducto(){    
