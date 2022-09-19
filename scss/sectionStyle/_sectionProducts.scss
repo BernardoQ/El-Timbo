@@ -15,7 +15,7 @@
     column-gap: 0.1rem;
     row-gap: 4rem;
     width: 80%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     justify-items: center;
     margin: 1rem auto 3rem auto;
     margin-top: 4rem;      
@@ -32,7 +32,7 @@
 }
 
 #carrito{
-  //display: none;
+  display: none;
   width:fit-content;
   height: 20rem;
   overflow-y: scroll;
@@ -44,6 +44,20 @@
 
   #carrito_tr::-webkit-scrollbar{
     height: 4rem;
+  }
+}
+
+#carrito_tr{
+  border: ridge;
+    tr{
+      border: ridge;
+    }
+}
+
+.carritoHover:hover{
+  #carrito{
+    display: block;
+    padding-bottom: 5rem;
   }
 }
 
