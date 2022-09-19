@@ -121,15 +121,17 @@ function borrarProducto(){
 function agregarBorrarUno(){
     carrito.forEach(producto=>{
         document.querySelector(`#btn-borrarUnSolo${producto.id}`).addEventListener("click",()=>{
-            let find = carrito.find(element=>element.cantidad===producto.cantidad);
-            find.cantidad--;
+            let find = carrito.find(element=>element.id===producto.id);
+            if(find.cantidad > 0){
+                find.cantidad--;
+              }                  
             pintarCarrito()
         })
     });
     
     carrito.forEach(producto=>{
         document.querySelector(`#btn-agregarUnSolo${producto.id}`).addEventListener("click",()=>{
-            let find = carrito.find(element=>element.cantidad===producto.cantidad);
+            let find = carrito.find(element=>element.id===producto.id);
             find.cantidad++;
             pintarCarrito()
         })
