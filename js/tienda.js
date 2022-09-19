@@ -68,9 +68,9 @@ function pintarCarrito(){
         <td>$${prod.price*prod.cantidad}</td>
                
         <li class="btnProductos">  
-            <button class="btnCarrito" id="btn-borrarUnSolo${prod.id}">-</button>            
+            <button class="btnCarrito btnCarritoUno" id="btn-borrarUnSolo${prod.id}">-</button>            
             <button class="btnCarrito" id="btn-borrar${prod.id}">Borrar</button>
-            <button class="btnCarrito" id="btn-agregarUnSolo${prod.id}">+</button>
+            <button class="btnCarrito btnCarritoUno" id="btn-agregarUnSolo${prod.id}">+</button>
         </li>`
 
         //PINTAR TOTAL Y BOTON PAGO CARRITO
