@@ -13,6 +13,7 @@ let productos = [
 const containerDiv = document.querySelector(".products__gallery");
 const carritoDiv = document.querySelector("#carrito_tr");
 const totalContainer = document.getElementById("total");
+const totalEnHeader = document.getElementById("totalEnHeader");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //FUNCION CREAR CARDS DE PRODUCTOS
@@ -43,14 +44,15 @@ function agregarFuncionAlBoton(){
 //FUNCION AGREGAR PRODUCTO AL CARRITO
 function agregarAlCarrito(producto){
     let existe = carrito.some(prod=>prod.id === producto.id);
-    if(existe===false){
+    let prodFind = carrito.find(prod=> prod.id===producto.id);
+    existe===false ? (producto.cantidad = 1)[carrito.push(producto)] : prodFind.cantidad++;
+    /*if(existe===false){
         producto.cantidad = 1;
         carrito.push(producto);
     }
-    else{
-        let prodFind = carrito.find(prod=> prod.id===producto.id);
+    else{       
         prodFind.cantidad++;
-    }
+    }*/
     pintarCarrito();
 };
 
@@ -84,27 +86,35 @@ function pintarCarrito(){
             <a href="https://www.mercadopago.com.ar/home">
                 <button>Comprar</button>
             </a>           
-        </tr>`
+        </tr>`;
+        
+        totalEnHeader.innerHTML =
+        `<td>
+        <strong><p id="totalCarritoHeader">$${sumarTodos}</p></strong>
+        </td>`;
     });
 
     //PINTAR MENSAJE CARRITO VACIO
     let mensajeCarrito = document.getElementById("carrito__footer");
-    if(carrito.length === 0){
-        totalContainer.innerHTML= "0";
-        mensajeCarrito.innerHTML +=
+    carrito.length === 0 ? (totalContainer.innerHTML= "0")[mensajeCarrito.innerHTML +=
         `<li>
         <strong><p id="mensajeCarrito">Carrito Vacio</p></strong>
         </li>`
-    } else {
-        mensajeCarrito.innerHTML = "";
-    };
+        ] : mensajeCarrito.innerHTML = "";
 
+        /*if(carrito.length === 0){
+            totalContainer.innerHTML= "0";
+            mensajeCarrito.innerHTML +=
+            `<li>
+            <strong><p id="mensajeCarrito">Carrito Vacio</p></strong>
+            </li>`        
+        } else {
+            mensajeCarrito.innerHTML = "";
+        };*/
     localStorage.setItem("carrito",JSON.stringify(carrito))
     borrarProducto()
     agregarBorrarUno()
 };
-
-
 
 //FUNCION BORRAR PRODUCTOS DEL CARRITO
 function borrarProducto(){    
@@ -122,9 +132,10 @@ function agregarBorrarUno(){
     carrito.forEach(producto=>{
         document.querySelector(`#btn-borrarUnSolo${producto.id}`).addEventListener("click",()=>{
             let find = carrito.find(element=>element.id===producto.id);
-            if(find.cantidad > 0){
+            find.cantidad > 0 && find.cantidad--;
+            /*if(find.cantidad > 0){
                 find.cantidad--;
-              }                  
+              } */                 
             pintarCarrito()
         })
     });
@@ -136,8 +147,7 @@ function agregarBorrarUno(){
             pintarCarrito()
         })
     });
-}
-
+};
 
 pintarCarrito();
 crearCards();
