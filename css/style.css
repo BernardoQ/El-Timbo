@@ -59,14 +59,18 @@ body, .empty2, .empty3 {
   height: 4rem;
   background-color: #AE9A64;
   position: fixed; }
-  .header .header__content {
+  .header .header__navBar {
+    width: 100%;
+    align-items: center; }
+  .header .navBar__content {
     display: inline-flex;
     justify-content: space-evenly;
+    align-items: center;
     list-style: none;
     width: 70%; }
-    .header .header__content .header__content li {
+    .header .navBar__content .navBar__content li {
       margin: auto; }
-      .header .header__content .header__content li .header__content li a {
+      .header .navBar__content .navBar__content li .navBar__content li a {
         padding: 0.5rem;
         color: #192436; }
 
@@ -127,7 +131,6 @@ body, .empty2, .empty3 {
   justify-content: center;
   font-size: 1rem;
   padding-left: 1rem;
-  margin-top: 2rem;
   color: white;
   background-color: #192436; }
   #carrito #carrito_tr::-webkit-scrollbar {
@@ -139,8 +142,7 @@ body, .empty2, .empty3 {
     border: ridge; }
 
 .carritoHover:hover #carrito {
-  display: block;
-  padding-bottom: 5rem; }
+  display: block; }
 
 #contenidoCarrito {
   text-align: center; }
@@ -152,12 +154,14 @@ body, .empty2, .empty3 {
   width: 1.5rem; }
 
 .carritoFooter {
-  vertical-align: top;
-  padding-top: 2rem; }
+  vertical-align: top; }
 
 .carrito__img img {
   width: 4rem;
   height: 3.5rem; }
+
+#totalCarritoHeader {
+  margin-bottom: 0.2rem; }
 
 body, .empty2, .empty3 {
   background-repeat: no-repeat;
@@ -234,6 +238,153 @@ body, .empty2, .empty3 {
       width: 25rem;
       height: 20rem;
       border-radius: 15px; }
+
+body, .empty2, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.section__products, .section__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  background-color: white; }
+  .section__products .main__artist, .section__gallery .main__artist {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5rem; }
+    .section__products .main__artist img, .section__gallery .main__artist img {
+      height: 20rem;
+      width: auto;
+      border-radius: 15px; }
+    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
+      display: flex;
+      justify-content: space-evenly; }
+    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
+      text-align: center; }
+
+:root {
+  --bg:#1f2029;
+  --bg-secundary:#2A2B38;
+  --color:#dfdee5; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color);
+  background: var(--bg);
+  font-family: 'Source Sans Pro', 'Arial';
+  padding: 1em; }
+
+.container {
+  max-width: 480px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .container .input {
+    display: none; }
+  .container .input:not(:checked) ~ .card .sign {
+    left: 0;
+    z-index: 1; }
+  .container .input:not(:checked) ~ .card .log {
+    left: 100%; }
+  .container .input:checked ~ .toggle .icon .arrow {
+    left: 50%;
+    transform: rotateY(180deg); }
+  .container .input:checked ~ .card .sign {
+    left: -100%; }
+  .container .input:checked ~ .card .log {
+    left: 0;
+    z-index: 1; }
+  .container .toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin: 1em 0; }
+    .container .toggle .icon {
+      width: 64px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 64px;
+      outline: 2px solid var(--bg-secundary); }
+      .container .toggle .icon .arrow {
+        position: absolute;
+        left: 0;
+        background: var(--bg-secundary);
+        border-radius: 50%;
+        transition: all ease 0.75s; }
+  .container .card {
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 16px;
+    padding: 0.5em;
+    background: var(--bg-secundary);
+    overflow: hidden; }
+    .container .card .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      transition: all ease 1s; }
+      .container .card .content .title {
+        font-family: 'Poppins', 'Arial';
+        font-weight: 600; }
+      .container .card .content .fields {
+        width: 100%;
+        padding: 0 2em; }
+        .container .card .content .fields .field {
+          display: flex;
+          align-items: center;
+          gap: 0.75em;
+          margin: 0.5em 0;
+          padding: 1em;
+          border-radius: 32px;
+          background: var(--bg); }
+          .container .card .content .fields .field input {
+            width: 100%;
+            border: none;
+            outline: none;
+            color: var(--color);
+            background: transparent; }
+      .container .card .content .submit {
+        width: 100%;
+        text-align: center;
+        margin: 1em 0; }
+        .container .card .content .submit .button-submit {
+          cursor: pointer;
+          width: 50%;
+          border: none;
+          outline: none;
+          padding: 1em 1.5em;
+          border-radius: 1.5em;
+          box-shadow: 0 6px 12px -4px #ffffff40;
+          transition: all ease 0.125s; }
+          .container .card .content .submit .button-submit:hover {
+            outline: 4px solid #ffffff40; }
 
 * {
   padding: 0;

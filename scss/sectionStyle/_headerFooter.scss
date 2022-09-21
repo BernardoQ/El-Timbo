@@ -10,16 +10,22 @@
     background-color: $headerColor;
     position: fixed;
 
-    .header__content{
+    .header__navBar{
+        width: 100%;
+        align-items: center;
+    }
+
+    .navBar__content{
         display: inline-flex;
         justify-content: space-evenly;
+        align-items: center;
         list-style: none;
         width: 70%;
     
-        .header__content li{
+        .navBar__content li{
             margin: auto;
     
-            .header__content li a{
+            .navBar__content li a{
                 padding: 0.5rem;
                 color: $brandColorOne;  
             }
