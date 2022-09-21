@@ -43,14 +43,9 @@ function agregarFuncionAlBoton(){
 //FUNCION AGREGAR PRODUCTO AL CARRITO
 function agregarAlCarrito(producto){
     let existe = carrito.some(prod=>prod.id === producto.id);
-    if(existe===false){
-        producto.cantidad = 1;
-        carrito.push(producto);
-    }
-    else{
-        let prodFind = carrito.find(prod=> prod.id===producto.id);
-        prodFind.cantidad++;
-    }
+    producto.cantidad=1;
+    let prodFind = carrito.find(prod=> prod.id===producto.id);
+    existe===false ?  carrito.push(producto) : prodFind.cantidad++;
     pintarCarrito();
 };
 
@@ -98,13 +93,12 @@ function pintarCarrito(){
     } else {
         mensajeCarrito.innerHTML = "";
     };
+    carrito.length === 0;
 
     localStorage.setItem("carrito",JSON.stringify(carrito))
     borrarProducto()
     agregarBorrarUno()
 };
-
-
 
 //FUNCION BORRAR PRODUCTOS DEL CARRITO
 function borrarProducto(){    
@@ -122,9 +116,7 @@ function agregarBorrarUno(){
     carrito.forEach(producto=>{
         document.querySelector(`#btn-borrarUnSolo${producto.id}`).addEventListener("click",()=>{
             let find = carrito.find(element=>element.id===producto.id);
-            if(find.cantidad > 0){
-                find.cantidad--;
-              }                  
+            find.cantidad > 0 && find.cantidad--;             
             pintarCarrito()
         })
     });
@@ -137,7 +129,6 @@ function agregarBorrarUno(){
         })
     });
 }
-
 
 pintarCarrito();
 crearCards();

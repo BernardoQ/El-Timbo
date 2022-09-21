@@ -121,7 +121,6 @@ body, .empty2, .empty3 {
       border-radius: 15px; }
 
 #carrito {
-  display: none;
   width: 35rem;
   height: 20rem;
   overflow-y: scroll;
