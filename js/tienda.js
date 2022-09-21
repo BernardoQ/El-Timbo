@@ -34,9 +34,9 @@ function crearCards(){
 
 //FUNCION AGREGAR EVENTO A BOTON 
 function agregarFuncionAlBoton(){
-    productos.forEach(producto=>{
-        document.querySelector(`#btn-agregar${producto.id}`).addEventListener("click",()=>{
-            agregarAlCarrito(producto)
+    productos.forEach(prod=>{
+        document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
+            agregarAlCarrito(prod)
         })
     })
 };
@@ -44,21 +44,8 @@ function agregarFuncionAlBoton(){
 //FUNCION AGREGAR PRODUCTO AL CARRITO
 function agregarAlCarrito(producto){
     let existe = carrito.some(prod=>prod.id === producto.id);
-<<<<<<< HEAD
-    producto.cantidad=1;
-    let prodFind = carrito.find(prod=> prod.id===producto.id);
-    existe===false ?  carrito.push(producto) : prodFind.cantidad++;
-=======
     let prodFind = carrito.find(prod=> prod.id===producto.id);
     existe===false ? (producto.cantidad = 1)[carrito.push(producto)] : prodFind.cantidad++;
-    /*if(existe===false){
-        producto.cantidad = 1;
-        carrito.push(producto);
-    }
-    else{       
-        prodFind.cantidad++;
-    }*/
->>>>>>> 25f79ec586932254135cf7e8cef54951ab392d6d
     pintarCarrito();
 };
 
@@ -84,46 +71,29 @@ function pintarCarrito(){
         //PINTAR TOTAL Y BOTON PAGO CARRITO
         const sumarTodos = carrito.map(prod => prod.price * prod.cantidad).reduce((prev, curr) => prev + curr, 0);
         totalContainer.innerHTML =
-        `<td>
-        <strong><p id="totalCarrito">$${sumarTodos}</p></strong>
-        </td>
-        
-        <tr>
-            <a href="https://www.mercadopago.com.ar/home">
-                <button>Comprar</button>
-            </a>           
-        </tr>`;
+            `<td>
+            <strong><p id="totalCarrito">$${sumarTodos}</p></strong>
+            </td>
+            
+            <tr>
+                <a href="https://www.mercadopago.com.ar/home">
+                    <button>Comprar</button>
+                </a>           
+            </tr>`;        
         
         totalEnHeader.innerHTML =
-        `<td>
-        <strong><p id="totalCarritoHeader">$${sumarTodos}</p></strong>
-        </td>`;
+            `<strong><p id="totalCarritoHeader">$${sumarTodos}</p></strong>`;        
     });
 
     //PINTAR MENSAJE CARRITO VACIO
+    carrito.length === 0 && (totalEnHeader.innerHTML = "<strong>$0</strong>");
     let mensajeCarrito = document.getElementById("carrito__footer");
-    carrito.length === 0 ? (totalContainer.innerHTML= "0")[mensajeCarrito.innerHTML +=
+    carrito.length === 0 ? (totalContainer.innerHTML= "$0")[mensajeCarrito.innerHTML +=
         `<li>
         <strong><p id="mensajeCarrito">Carrito Vacio</p></strong>
         </li>`
-<<<<<<< HEAD
-    } else {
-        mensajeCarrito.innerHTML = "";
-    };
-    carrito.length === 0;
-=======
         ] : mensajeCarrito.innerHTML = "";
->>>>>>> 25f79ec586932254135cf7e8cef54951ab392d6d
-
-        /*if(carrito.length === 0){
-            totalContainer.innerHTML= "0";
-            mensajeCarrito.innerHTML +=
-            `<li>
-            <strong><p id="mensajeCarrito">Carrito Vacio</p></strong>
-            </li>`        
-        } else {
-            mensajeCarrito.innerHTML = "";
-        };*/
+        
     localStorage.setItem("carrito",JSON.stringify(carrito))
     borrarProducto()
     agregarBorrarUno()
@@ -131,9 +101,9 @@ function pintarCarrito(){
 
 //FUNCION BORRAR PRODUCTOS DEL CARRITO
 function borrarProducto(){    
-    carrito.forEach(producto=>{
-        document.querySelector(`#btn-borrar${producto.id}`).addEventListener("click",()=>{
-            let indice = carrito.findIndex(element=>element.id===producto.id);
+    carrito.forEach(prod=>{
+        document.querySelector(`#btn-borrar${prod.id}`).addEventListener("click",()=>{
+            let indice = carrito.findIndex(element=>element.id===prod.id);
             carrito.splice(indice,1);
             pintarCarrito()
         })
@@ -142,33 +112,22 @@ function borrarProducto(){
 
 //FUNCION AUMENTAR-DISMINUIR PRODUCTOS DEL CARRITO
 function agregarBorrarUno(){
-    carrito.forEach(producto=>{
-        document.querySelector(`#btn-borrarUnSolo${producto.id}`).addEventListener("click",()=>{
-            let find = carrito.find(element=>element.id===producto.id);
-<<<<<<< HEAD
-            find.cantidad > 0 && find.cantidad--;             
-=======
+    carrito.forEach(prod=>{
+        document.querySelector(`#btn-borrarUnSolo${prod.id}`).addEventListener("click",()=>{
+            let find = carrito.find(element=>element.id===prod.id);
             find.cantidad > 0 && find.cantidad--;
-            /*if(find.cantidad > 0){
-                find.cantidad--;
-              } */                 
->>>>>>> 25f79ec586932254135cf7e8cef54951ab392d6d
             pintarCarrito()
         })
     });
     
-    carrito.forEach(producto=>{
-        document.querySelector(`#btn-agregarUnSolo${producto.id}`).addEventListener("click",()=>{
-            let find = carrito.find(element=>element.id===producto.id);
+    carrito.forEach(prod=>{
+        document.querySelector(`#btn-agregarUnSolo${prod.id}`).addEventListener("click",()=>{
+            let find = carrito.find(element=>element.id===prod.id);
             find.cantidad++;
             pintarCarrito()
         })
     });
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> 25f79ec586932254135cf7e8cef54951ab392d6d
 
 pintarCarrito();
 crearCards();
