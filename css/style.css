@@ -144,6 +144,11 @@ body, .empty2, .empty3 {
 .carritoHover:hover #carrito {
   display: block; }
 
+.carritoHeader {
+  text-align: center; }
+  .carritoHeader .carritoHeader__titulos {
+    padding: 0rem 1rem; }
+
 #contenidoCarrito {
   text-align: center; }
 
