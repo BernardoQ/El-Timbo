@@ -1,3 +1,4 @@
+
 let productos = [
     {"name": "Chorizo clasico", "price": 550, "id":"prod1", img: "../img/chorizos.jpg"},
     {"name": "Chorizo ahumado", "price": 550, "id":"prod2", img: "../img/chorizos.jpg"},
@@ -29,6 +30,7 @@ function crearCards(){
             <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
         </li>`
     })
+    
     agregarFuncionAlBoton();
 };
 
@@ -37,6 +39,20 @@ function agregarFuncionAlBoton(){
     productos.forEach(prod=>{
         document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
             agregarAlCarrito(prod)
+
+        //FUNCION TOASTIFY BOTON AGREGAR
+            Toastify({
+                text: "Producto Agregado",
+                duration: 2000,
+                destination: "https://github.com/apvarun/toastify-js",
+                gravity: "bottom", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                color: "#ffffff",
+                background: "#192436",
+                },
+            }).showToast();
         })
     })
 };
@@ -72,23 +88,26 @@ function pintarCarrito(){
         const sumarTodos = carrito.map(prod => prod.price * prod.cantidad).reduce((prev, curr) => prev + curr, 0);
         totalContainer.innerHTML =
             `<td>
-            <strong><p id="totalCarrito">$${sumarTodos}</p></strong>
+                <strong><p id="totalCarrito">$${sumarTodos}</p></strong>
             </td>
             
             <tr>            
-                    <button id="btnComprar">Comprar</button>           
+                <button id="btnComprar">Comprar</button>           
             </tr>`;  
         
         document.getElementById("btnComprar").onclick = function(){
             Swal.fire({
+                color: "#ffffff",
+                background:"#192436",
+                icon: "warning",
                 title: 'Desea finalizar su compra?',
                 showDenyButton: true,
-                //showCancelButton: true,
+                confirmButtonColor: "#67B121",
                 confirmButtonText: 'Finalizar Compra',
                 denyButtonText: `Seguir comprando`,
+                denyButtonColor: "#DE1F10",
               }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
-                result.isConfirmed === true ? Swal(location.href = 'https://www.mercadopago.com.ar/home') : Swal('Seguir comprando', '',);
+                result.isConfirmed === true ? Swal(location.href = 'https://www.mercadopago.com.ar/home') : Swal('Seguir comprando', '','info');
               })
         }
         
