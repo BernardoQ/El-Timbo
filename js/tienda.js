@@ -75,11 +75,22 @@ function pintarCarrito(){
             <strong><p id="totalCarrito">$${sumarTodos}</p></strong>
             </td>
             
-            <tr>
-                <a href="https://www.mercadopago.com.ar/home">
-                    <button>Comprar</button>
-                </a>           
-            </tr>`;        
+            <tr>            
+                    <button id="btnComprar">Comprar</button>           
+            </tr>`;  
+        
+        document.getElementById("btnComprar").onclick = function(){
+            Swal.fire({
+                title: 'Desea finalizar su compra?',
+                showDenyButton: true,
+                //showCancelButton: true,
+                confirmButtonText: 'Finalizar Compra',
+                denyButtonText: `Seguir comprando`,
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                result.isConfirmed === true ? Swal(location.href = 'https://www.mercadopago.com.ar/home') : Swal('Seguir comprando', '',);
+              })
+        }
         
         totalEnHeader.innerHTML =
             `<strong><p id="totalCarritoHeader">$${sumarTodos}</p></strong>`;        
