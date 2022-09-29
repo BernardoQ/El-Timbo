@@ -17,6 +17,18 @@ const totalContainer = document.getElementById("total");
 const totalEnHeader = document.getElementById("totalEnHeader");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+/*fetch("../data.json")
+.then((response)=> response.json())
+.then((datos)=> crearCards(datos))
+
+const respuesta = async ()=>{
+    const response = await fetch("../data.json");
+    const data = await response.json();
+
+    crearCards(data);
+}*/
+
+
 //FUNCION CREAR CARDS DE PRODUCTOS
 function crearCards(){
     productos.forEach(element=>{
