@@ -44,10 +44,8 @@ function agregarFuncionAlBoton(){
             Toastify({
                 text: "Producto Agregado",
                 duration: 2000,
-                destination: "https://github.com/apvarun/toastify-js",
                 gravity: "bottom", // `top` or `bottom`
                 position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
                 style: {
                 color: "#ffffff",
                 background: "#192436",
