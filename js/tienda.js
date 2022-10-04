@@ -4,12 +4,54 @@ const totalContainer = document.getElementById("total");
 const totalEnHeader = document.getElementById("totalEnHeader");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-/*fetch("../data.json")
+fetch("../data.json")
 .then((response)=> response.json())
-.then((datos)=> crearCards(datos))
-*/
+.then((datos)=> {
+        //FUNCION CREAR CARDS DE PRODUCTOS
+        function crearCards(){
+            datos.forEach(element=>{
+                containerDiv.innerHTML +=         
+                `<li class="cards">
+                    <img src="${element.img}" alt="">
+                    <div class="agregarProducto">
+                        <p>${element.name}</p>
+                        <p class="producto_price">$${element.price}</p>      
+                    </div>
+                    <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
+                </li>`
+            })
+            
+            agregarFuncionAlBoton();
+        };
 
-const respuesta = async ()=>{
+        crearCards(datos);
+
+        //FUNCION AGREGAR EVENTO A BOTON 
+        function agregarFuncionAlBoton(){
+            datos.forEach(prod=>{
+                document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
+                    agregarAlCarrito(prod)
+    
+                //FUNCION TOASTIFY BOTON AGREGAR
+                    Toastify({
+                        text: "Producto Agregado",
+                        duration: 2000,
+                        gravity: "bottom", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        style: {
+                        color: "#ffffff",
+                        background: "#192436",
+                        },
+                    }).showToast();
+                })
+            })
+        };
+    }
+
+);
+
+
+/*const respuesta = async ()=>{
     const response = await fetch("../data.json");
     const data = await response.json();
 
@@ -53,7 +95,7 @@ const respuesta = async ()=>{
     crearCards();
 };
 
-respuesta();
+respuesta();*/
 
 //FUNCION AGREGAR PRODUCTO AL CARRITO
 function agregarAlCarrito(producto){
