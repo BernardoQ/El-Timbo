@@ -1,16 +1,3 @@
-
-let productos = [
-    {"name": "Chorizo clasico", "price": 550, "id":"prod1", img: "../img/chorizos.jpg"},
-    {"name": "Chorizo ahumado", "price": 550, "id":"prod2", img: "../img/chorizos.jpg"},
-    {"name": "Chorizo queso azul", "price": 550, "id":"prod3", img: "../img/chorizos.jpg"},
-    {"name": "Chorizo morrones", "price": 550, "id":"prod4", img: "../img/chorizos.jpg"},
-    {"name": "Pernil pequeño", "price": 3550, "id":"prod5", img:"../img/pernil.jpg"},
-    {"name": "Pernil mediano", "price": 4550, "id":"prod6", img:"../img/pernil.jpg"},
-    {"name": "Pernil grande", "price": 5550, "id":"prod7", img:"../img/pernil.jpg"},
-    {"name": "Salame picado grueso", "price": 850, "id":"prod8", img: "../img/salamin.jpg"},
-    {"name": "Salame picado fino", "price": 850, "id":"prod9", img: "../img/salamin.jpg"}
-];
-
 const containerDiv = document.querySelector(".products__gallery");
 const carritoDiv = document.querySelector("#carrito_tr");
 const totalContainer = document.getElementById("total");
@@ -18,57 +5,98 @@ const totalEnHeader = document.getElementById("totalEnHeader");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const productossss = "../data.json";
 
-/*fetch("../data.json")
+fetch("../data.json")
 .then((response)=> response.json())
-.then((datos)=> crearCards(datos))
+.then((datos)=> {
+        //FUNCION CREAR CARDS DE PRODUCTOS
+        function crearCards(){
+            datos.forEach(element=>{
+                containerDiv.innerHTML +=         
+                `<li class="cards">
+                    <img src="${element.img}" alt="">
+                    <div class="agregarProducto">
+                        <p>${element.name}</p>
+                        <p class="producto_price">$${element.price}</p>      
+                    </div>
+                    <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
+                </li>`
+            })
+            
+            agregarFuncionAlBoton();
+        };
 
-const respuesta = async ()=>{
+        crearCards(datos);
+
+        //FUNCION AGREGAR EVENTO A BOTON 
+        function agregarFuncionAlBoton(){
+            datos.forEach(prod=>{
+                document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
+                    agregarAlCarrito(prod)
+    
+                //FUNCION TOASTIFY BOTON AGREGAR
+                    Toastify({
+                        text: "Producto Agregado",
+                        duration: 2000,
+                        gravity: "bottom", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        style: {
+                        color: "#ffffff",
+                        background: "#192436",
+                        },
+                    }).showToast();
+                })
+            })
+        };
+    }
+
+);
+
+
+/*const respuesta = async ()=>{
     const response = await fetch("../data.json");
     const data = await response.json();
 
-    crearCards(data);
-}*/
-
-
-//FUNCION CREAR CARDS DE PRODUCTOS
-function crearCards(){
-    productos.forEach(element=>{
-        containerDiv.innerHTML +=         
-        `<li class="cards">
-            <img src="${element.img}" alt="">
-            <div class="agregarProducto">
-                <p>${element.name}</p>
-                <p class="producto_price">$${element.price}</p>      
-            </div>
-            <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
-        </li>`
-    })
-    
-    agregarFuncionAlBoton();
-};
-
-//FUNCION AGREGAR EVENTO A BOTON 
-function agregarFuncionAlBoton(){
-    productos.forEach(prod=>{
-        document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
-            agregarAlCarrito(prod)
-
-        //FUNCION TOASTIFY BOTON AGREGAR
-            Toastify({
-                text: "Producto Agregado",
-                duration: 2000,
-                destination: "https://github.com/apvarun/toastify-js",
-                gravity: "bottom", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                color: "#ffffff",
-                background: "#192436",
-                },
-            }).showToast();
+    //FUNCION CREAR CARDS DE PRODUCTOS
+    function crearCards(){
+        data.forEach(element=>{
+            containerDiv.innerHTML +=         
+            `<li class="cards">
+                <img src="${element.img}" alt="">
+                <div class="agregarProducto">
+                    <p>${element.name}</p>
+                    <p class="producto_price">$${element.price}</p>      
+                </div>
+                <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
+            </li>`
         })
-    })
+        
+        agregarFuncionAlBoton();
+    };
+
+    //FUNCION AGREGAR EVENTO A BOTON 
+    function agregarFuncionAlBoton(){
+        data.forEach(prod=>{
+            document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
+                agregarAlCarrito(prod)
+
+            //FUNCION TOASTIFY BOTON AGREGAR
+                Toastify({
+                    text: "Producto Agregado",
+                    duration: 2000,
+                    gravity: "bottom", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    style: {
+                    color: "#ffffff",
+                    background: "#192436",
+                    },
+                }).showToast();
+            })
+        })
+    };
+    crearCards();
 };
+
+respuesta();*/
 
 //FUNCION AGREGAR PRODUCTO AL CARRITO
 function agregarAlCarrito(producto){
@@ -173,7 +201,6 @@ function agregarBorrarUno(){
 };
 
 pintarCarrito();
-crearCards();
 
 
 
