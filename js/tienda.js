@@ -16,6 +16,7 @@ const carritoDiv = document.querySelector("#carrito_tr");
 const totalContainer = document.getElementById("total");
 const totalEnHeader = document.getElementById("totalEnHeader");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const productossss = "../data.json";
 
 /*fetch("../data.json")
 .then((response)=> response.json())
