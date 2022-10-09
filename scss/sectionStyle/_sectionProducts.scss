@@ -1,6 +1,9 @@
 @import './variables';
 
 .section__products{
+  background-color: $brandColorOne !important;
+  color: $brandColorTwo;
+
     @extend %mainSection;
     h2{
       margin-top: 5rem;
@@ -31,68 +34,5 @@
   };
 }
 
-#carrito{
-  //display: none;
-  width:35rem;
-  height: 20rem;
-  overflow-y: scroll;
-  justify-content: center;
-  font-size: 1rem;
-  padding-left: 1rem;
-  //margin-top: 2rem;
-  color: white;
-  background-color: $brandColorOne;
 
-  #carrito_tr::-webkit-scrollbar{
-    height: 4rem;
-  }
-}
-
-#carrito_tr{
-  border: ridge;
-    tr{
-      border: ridge;
-    }
-}
-
-.carritoHover:hover{
-  #carrito{
-    display: block;
-  }
-}
-
-.carritoHeader{
-  text-align: center;
-    .carritoHeader__titulos{
-      padding: 0rem 1rem;
-    }
-}
-
-#contenidoCarrito{
-  text-align: center;
-}
-
-.btnProductos{
-  width:max-content;
-}
-
-.btnCarritoUno{
-  width: 1.5rem;
-}
-
-.carritoFooter{
-  vertical-align: top;
-  //padding-top: 2rem;
-}
-
-.carrito__img{
-  img{
-    width: 4rem;
-    height: 3.5rem;
-  }
-}
-
-#totalCarritoHeader{
-  margin-bottom: 0.2rem;
-}
 

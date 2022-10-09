@@ -1,54 +1,60 @@
-body, .empty2, .empty3 {
+.log, .contact, .empty1Background, .empty2, .empty3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-attachment: fixed; }
 
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
 .section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: auto;
-  background-color: white; }
-  .section__products .main__artist, .section__gallery .main__artist {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .section__products .main__artist img, .section__gallery .main__artist img {
-      height: 20rem;
-      width: auto;
-      border-radius: 15px; }
-    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
-      display: flex;
-      justify-content: space-evenly; }
-    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
-      text-align: center; }
+  margin: auto; }
 
-body, .empty2, .empty3 {
+.log, .contact, .empty1Background, .empty2, .empty3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-attachment: fixed; }
 
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
 .section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: auto;
-  background-color: white; }
-  .section__products .main__artist, .section__gallery .main__artist {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .section__products .main__artist img, .section__gallery .main__artist img {
-      height: 20rem;
-      width: auto;
-      border-radius: 15px; }
-    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
-      display: flex;
-      justify-content: space-evenly; }
-    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
-      text-align: center; }
+  margin: auto; }
 
 .header {
   display: flex;
@@ -61,51 +67,140 @@ body, .empty2, .empty3 {
   position: fixed; }
   .header .header__navBar {
     width: 100%;
-    align-items: center; }
+    align-self: center; }
   .header .navBar__content {
     display: inline-flex;
     justify-content: space-evenly;
+    margin: auto 10% auto 10%;
     align-items: center;
     list-style: none;
-    width: 70%; }
+    width: 80%; }
     .header .navBar__content .navBar__content li {
       margin: auto; }
       .header .navBar__content .navBar__content li .navBar__content li a {
         padding: 0.5rem;
         color: #192436; }
 
-footer {
+.footer {
   height: 10rem;
-  background-color: grey; }
+  background-color: grey;
+  width: 100%; }
+  .footer .footer__content {
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 0 !important; }
+    .footer .footer__content .footer__socialMedia {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center; }
+      .footer .footer__content .footer__socialMedia .socialMedia__item-content {
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: #AE9A64;
+        text-align: center;
+        line-height: 3rem;
+        margin: 0 10px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1; }
+        .footer .footer__content .footer__socialMedia .socialMedia__item-content .a__img {
+          width: 2rem;
+          height: 2rem;
+          position: relative;
+          transition: .5s;
+          z-index: 3; }
 
-body, .empty2, .empty3 {
+.socialMedia__item-content:hover img {
+  transform: rotateY(360deg); }
+
+.socialMedia__item-content:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  z-index: 2; }
+
+.socialMedia__item-content:hover:before {
+  top: 0; }
+
+.footer__socialMedia li:nth-child(1) a:before {
+  background: #AE9A64; }
+
+.footer__socialMedia li:nth-child(2) a:before {
+  background: #AE9A64; }
+
+.footer__socialMedia li:nth-child(3) a:before {
+  background: #AE9A64; }
+
+.footer__rights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: grey;
+  justify-content: center;
+  padding-top: 5rem;
+  margin: auto; }
+  .footer__rights .rights__text {
+    justify-self: center;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    font-weight: 600; }
+    .footer__rights .rights__text a {
+      color: black; }
+  .footer__rights .goUp {
+    display: flex;
+    justify-content: right;
+    background-color: grey;
+    padding-right: 2rem; }
+    .footer__rights .goUp a {
+      color: black; }
+    .footer__rights .goUp .material-icons {
+      font-size: 24px;
+      margin-right: 2rem;
+      margin-bottom: 2rem; }
+
+.log, .contact, .empty1Background, .empty2, .empty3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-attachment: fixed; }
 
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
 .section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: auto;
-  background-color: white; }
-  .section__products .main__artist, .section__gallery .main__artist {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .section__products .main__artist img, .section__gallery .main__artist img {
-      height: 20rem;
-      width: auto;
-      border-radius: 15px; }
-    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
-      display: flex;
-      justify-content: space-evenly; }
-    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
-      text-align: center; }
+  margin: auto; }
 
-.section__products h2 {
-  margin-top: 5rem; }
+.section__products {
+  background-color: #192436 !important;
+  color: #AE9A64; }
+  .section__products h2 {
+    margin-top: 5rem; }
 
 .products__container .products__gallery {
   display: grid;
@@ -124,6 +219,160 @@ body, .empty2, .empty3 {
       height: 14rem;
       border-radius: 15px; }
 
+.log, .contact, .empty1Background, .empty2, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
+.section__products, .section__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto; }
+
+.section__welcome {
+  justify-content: center;
+  text-align: center;
+  height: 30rem;
+  background-color: #192436;
+  color: #AE9A64; }
+  .section__welcome .section__main {
+    justify-self: center; }
+    .section__welcome .section__main p {
+      width: 60vw;
+      text-align: center; }
+
+.log, .contact, .empty1Background, .empty2, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
+.section__products, .section__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto; }
+
+.section__gallery {
+  background-color: #AE9A64;
+  color: #192436; }
+  .section__gallery .work__gallery {
+    margin-top: 4rem; }
+    .section__gallery .work__gallery .work__gallery--img {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.2rem;
+      justify-content: space-around;
+      justify-items: center;
+      margin: 1rem auto 3rem auto; }
+      .section__gallery .work__gallery .work__gallery--img img {
+        width: 25rem;
+        height: 20rem;
+        border-radius: 15px; }
+
+.log, .contact, .empty1Background, .empty2, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
+.section__products, .section__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto; }
+
+.log {
+  height: 30rem;
+  background-color: #192436; }
+  .log #container {
+    padding-left: 2rem; }
+    .log #container h3 {
+      text-align: left;
+      color: white; }
+
+.log, .contact, .empty1Background, .empty2, .empty3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
+
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
+
+.section__products, .section__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto; }
+
 #carrito {
   width: 35rem;
   height: 20rem;
@@ -131,15 +380,15 @@ body, .empty2, .empty3 {
   justify-content: center;
   font-size: 1rem;
   padding-left: 1rem;
-  color: white;
-  background-color: #192436; }
+  color: #192436;
+  background-color: #AE9A64; }
   #carrito #carrito_tr::-webkit-scrollbar {
     height: 4rem; }
 
 #carrito_tr {
-  border: ridge; }
+  border: ridge #192436; }
   #carrito_tr tr {
-    border: ridge; }
+    border: ridge #192436; }
 
 .carritoHover:hover #carrito {
   display: block; }
@@ -168,107 +417,118 @@ body, .empty2, .empty3 {
 #totalCarritoHeader {
   margin-bottom: 0.2rem; }
 
-body, .empty2, .empty3 {
+.log, .contact, .empty1Background, .empty2, .empty3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-attachment: fixed; }
 
-.section__products, .section__gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  margin: auto;
-  background-color: white; }
-  .section__products .main__artist, .section__gallery .main__artist {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .section__products .main__artist img, .section__gallery .main__artist img {
-      height: 20rem;
-      width: auto;
-      border-radius: 15px; }
-    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
-      display: flex;
-      justify-content: space-evenly; }
-    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
-      text-align: center; }
+.btnCarrito {
+  background-color: #192436;
+  color: #AE9A64;
+  border-radius: 5px; }
 
-.section__welcome {
-  justify-content: center;
+.boton.click {
+  background-color: #AE9A64;
+  color: #192436;
+  border-radius: 5px; }
+
+.contact .section__title {
+  margin: 0 auto 3rem auto;
   text-align: center;
-  height: 30rem; }
-  .section__welcome .section__main {
-    justify-self: center; }
-    .section__welcome .section__main p {
-      width: 60vw;
-      text-align: center; }
-
-body, .empty2, .empty3 {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-attachment: fixed; }
+  font-size: 4rem;
+  color: #AE9A64;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
 
 .section__products, .section__gallery {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
+  margin: auto; }
+
+/*----------CONTACT PAGE STYLE----------*/
+.contact {
+  height: 30rem;
+  background-color: none;
+  background-image: url("");
+  background-color: #192436; }
+
+.contact__form {
+  width: 80%;
   margin: auto;
-  background-color: white; }
-  .section__products .main__artist, .section__gallery .main__artist {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .section__products .main__artist img, .section__gallery .main__artist img {
-      height: 20rem;
-      width: auto;
-      border-radius: 15px; }
-    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
-      display: flex;
-      justify-content: space-evenly; }
-    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
-      text-align: center; }
+  border: solid 1px #AE9A64;
+  color: white; }
 
-.section__gallery .work__gallery {
-  margin-top: 4rem; }
-  .section__gallery .work__gallery .work__gallery--img {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.2rem;
-    justify-content: space-around;
-    justify-items: center;
-    margin: 1rem auto 3rem auto; }
-    .section__gallery .work__gallery .work__gallery--img img {
-      width: 25rem;
-      height: 20rem;
-      border-radius: 15px; }
+#nameForm {
+  grid-area: name; }
 
-body, .empty2, .empty3 {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-attachment: fixed; }
+#lastNameForm {
+  grid-area: lastName; }
 
-.section__products, .section__gallery {
+#emailForm {
+  grid-area: email; }
+
+#subjectForm {
+  grid-area: subject; }
+
+#messageForm {
+  grid-area: message; }
+  #messageForm .form--text {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+
+#sendButtonForm {
+  grid-area: sendButton;
+  width: 100%; }
+
+.form__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "name subject" "lastName message" "email message" "sendButton sendButton"; }
+
+.form--item {
+  margin: 0.5rem auto 0.5rem auto;
+  width: 70%;
   justify-content: center;
-  margin: auto;
-  background-color: white; }
-  .section__products .main__artist, .section__gallery .main__artist {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .section__products .main__artist img, .section__gallery .main__artist img {
-      height: 20rem;
-      width: auto;
-      border-radius: 15px; }
-    .section__products .main__artist .profile--contact, .section__gallery .main__artist .profile--contact {
-      display: flex;
-      justify-content: space-evenly; }
-    .section__products .main__artist .artist__card--info, .section__gallery .main__artist .artist__card--info {
-      text-align: center; }
+  text-align: center; }
+
+.form--label {
+  font-weight: bold;
+  color: white; }
+
+.form--text {
+  border: none;
+  border-bottom: solid 1px #474544;
+  padding: 0.2rem;
+  width: 80%;
+  text-align: center; }
+
+.button {
+  color: white; }
+
+.btn--input {
+  all: unset; }
+
+.swal-modal {
+  border-radius: 15px;
+  border: 3px solid #192436; }
+
+.swal-title {
+  margin: 0px;
+  font-size: 4rem;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3); }
+
+.swal-text {
+  font-size: 2rem;
+  padding: 2rem;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3); }
 
 * {
   padding: 0;
@@ -283,60 +543,59 @@ a {
 ul {
   padding: 0; }
 
-body {
-  background: url("../img/chorizos.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* background-position: top center; */
-  background-color: #192436; }
-
 h1 {
   text-align: center;
   justify-items: center;
   align-items: center;
   font-size: 6rem;
-  color: white;
-  margin: auto; }
+  color: #AE9A64;
+  text-shadow: 2px 1px 2px #192436;
+  margin: auto;
+  padding-top: 15%; }
 
 h2 {
   text-align: center;
   justify-items: center;
   font-size: 4rem;
-  margin: 2rem auto; }
+  margin: auto; }
 
 h3 {
   text-align: center;
   justify-items: center;
   font-size: 2rem; }
 
+.empty1Background {
+  background-image: url("../img/brandBck2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem; }
+
 .empty1 {
   height: 50rem;
   background-color: none;
-  margin: auto;
   padding-top: 5rem; }
 
 .empty2 {
-  background-image: url("../img/sandwich.jpg");
-  background-repeat: no-repeat;
-  background-color: black;
-  backdrop-filter: blur(15px);
-  /* background-position: top center; */
-  height: 30rem; }
+  background-image: url("../img/empty2.jpg");
+  height: 30rem;
+  width: 100%;
+  background-color: black; }
+  .empty2 h2 {
+    color: #AE9A64;
+    margin-top: 0;
+    padding-top: 10%; }
 
 .empty3 {
-  height: 30rem;
-  background-color: none;
-  background-image: url("");
-  background-color: #192436; }
+  background-image: url("../img/sandwich.jpg");
+  background-color: black;
+  backdrop-filter: blur(15px);
+  height: 30rem; }
 
 .section {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: auto;
-  background-color: white; }
+  margin: auto; }
 
 .socialMedia__icon img {
   height: 2rem;

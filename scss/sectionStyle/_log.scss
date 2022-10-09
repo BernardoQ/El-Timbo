@@ -1,2 +1,16 @@
-@import 'variables';
+@import './variables';
 
+.log{
+    height: 30rem;    
+    @extend %background;
+    background-color: #192436;
+
+    #container{
+        //text-align-last: left;
+        padding-left: 2rem;
+        h3{
+            text-align: left;
+            color: white;
+        }
+    }
+}

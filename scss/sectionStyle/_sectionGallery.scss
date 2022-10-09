@@ -2,7 +2,9 @@
 
 .section__gallery{
     @extend %mainSection; 
-
+    background-color: $brandColorTwo;
+    color: $brandColorOne;
+    
     .work__gallery{
         margin-top: 4rem;
     

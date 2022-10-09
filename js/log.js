@@ -1,5 +1,5 @@
-let emailArray=[];
-let passwordArray=[];
+const emailArray=[];
+const passwordArray=[];
 
 let loginBox = document.getElementById("login");
 let regBox = document.getElementById("register");
@@ -18,45 +18,47 @@ function forTabFun(){
     event.preventDefault();
 }
 
-
+//FUNCION REGISTRARSE
 function register(){
     event.preventDefault();
 
-    let email = document.getElementById("re").value;
-    let password = document.getElementById("rp").value;
-    let passwordRetype = document.getElementById("rrp").value;
+    const email = document.getElementById("re").value;
+    const password = document.getElementById("rp").value;
+    const passwordRetype = document.getElementById("rrp").value;
 
     if (email == ""){
-        alert("Email required.");
+        swal.fire("Email requerido");
         return ;
     }
     else if (password == ""){
-        alert("Password required.");
+        alert("Password requerido");
         return ;
     }
     else if (passwordRetype == ""){
-        alert("Password required.");
+        alert("Password requerido");
         return ;
     }
     else if ( password != passwordRetype ){
-        alert("Password don't match retype your Password.");
+        alert("La contraseña no coincide");
         return;
     }
     else if(emailArray.indexOf(email) == -1){
         emailArray.push(email);
         passwordArray.push(password);
 
-        alert(email + "  Thanks for registration. \nTry to login Now");
+        alert(email + "  Gracias por registrarte. \nAhora puedes iniciar sesion");
 
         document.getElementById("re").value ="";
         document.getElementById("rp").value="";
         document.getElementById("rrp").value="";
     }
     else{
-        alert(email + " is already register.");
+        alert(email + " ya esta registrado.");
         return ;
     }
 }
+
+//FUNCION LOGIN
 function login(){
     event.preventDefault();
 
@@ -67,22 +69,22 @@ function login(){
 
     if(emailArray.indexOf(email) == -1){
         if (email == ""){
-            alert("Email required.");
+            alert("Email requerido.");
             return ;
         }
-        alert("Email does not exist.");
+        alert("Email no existe.");
         return ;
     }
     else if(passwordArray[i] != password){
         if (password == ""){
-            alert("Password required.");
+            alert("Contraseña requerida.");
             return ;
         }
-        alert("Password does not match.");
+        alert("La contraseña no coincide.");
         return ;
     }
     else {
-        alert(email + " yor are login Now \n welcome to our website.");
+        alert(email + " ahora estas logeado \n Bienvenido!");
 
         document.getElementById("se").value ="";
         document.getElementById("sp").value="";
@@ -90,6 +92,8 @@ function login(){
     }
 
 }
+
+//FUNCION OLVIDASTE DATOS
 function forgot(){
     event.preventDefault();
 
@@ -97,13 +101,13 @@ function forgot(){
 
     if(emailArray.indexOf(email) == -1){
         if (email == ""){
-            alert("Email required.");
+            alert("Email requerido.");
             return ;
         }
-        alert("Email does not exist.");
+        alert("El Email no existe.");
         return ;
     }
 
-    alert("email is send to your email check it in 24hr. \n Thanks");
+    alert("te enviamos un email, estara activo por 24hs. \n Gracias");
     document.getElementById("fe").value ="";
 }

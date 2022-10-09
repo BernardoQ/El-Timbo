@@ -12,35 +12,48 @@
 </head>
 <body>
     <!-- HEADER -->
-    <div class="header__container">
+    <div id="header" class="header__container">
         <header class="header">
             <ul class="navBar__content">
                 <li class="">
                     <a href="">Home</a>
                 </li>
                 <li class="">
-                    <a href="">Nosotros</a>
+                    <a href="#bienvenido">Nosotros</a>
                 </li>
                 <li class="">
-                    <a href="./pages/productos.html">Productos</a>
+                    <a href="#galeria">Galeria</a>
                 </li>
                 <li class="">
-                    <a href="">Galeria</a>
+                    <a href="#contacto">Contacto</a>
                 </li>
+
                 <li class="">
-                    <a href="">Contacto</a>
+                    <a href="./pages/tienda.html">Tienda</a>
+                </li>
+                <li class="carritoHover">
+                    <div id="totalEnHeader"></div>             
+                </li>
+                <li>
+                    <a href="./pages/log.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </a>
                 </li>
             </ul>
         </header>
     </div>
 
     <!-- DIV EMPTY/BACKGROUND -->
-    <div class="empty1">
-        <h1>El Timbo</h1>
+    <div class="empty1Background">
+        <div class="empty1">
+            <h1>El Timbo</h1>
+        </div>
     </div>
 
     <!-- SECTION WELCOME -->
-    <section class="section section__welcome">
+    <section id="bienvenido" class="section section__welcome">
         <div class="section__main">
             <h2>Bienvenido</h2>
             <h3>Historia</h3>
@@ -49,84 +62,27 @@
     </section>
 
     <!-- DIV EMPTY/BACKGROUND -->
-    <div class="empty3"></div> 
-
-
-<!-- <div class="calculador">
-        <h1>Calculador de Compra</h1>
-  
-        <p>Cuantos Kg de chorizos:
-            <input id="cantidad" type="number" 
-            onchange="Calcular()">
-        </p>
-  
-        <p>Tasa de interes :
-            <input id="tasaInteres" type="number" 
-            onchange="Calcular()">
-        </p>
-  
-        <p>Cuotas mensuales :
-            <input id="meses" type="number" 
-            onchange="Calcular()">
-        </p>
-  
-        <h2 id="total"></h2>
-    </div> -->
+    <div class="empty2">
+        <h2>Tradicion y calidad</h2>
+    </div> 
     
     <!-- SECTION PRODUCTOS -->
-    <!--<section class="section section__products">
+    <section class="section__products">
         <h2>PRODUCTOS</h2>
-        <div id="productos" class="products__gallery">
+        <div class="products__container">
             <h3>Productos</h3>
-            <ul class="products__gallery--img">
-                <li class="productosComprar">
-                    <a href="./pages/productos.html">
-                        <img src="./img/chorizos.jpg" alt="">  
-                    </a>         
-                </li>
-                <li class="productosComprar">
-                    <a href="./pages/productos.html">
-                        <img src="./img/chorizos.jpg" alt="">  
-                    </a>   
-                </li>
-                <li class="productosComprar">
-                    <a href="./pages/productos.html">
-                        <img src="./img/chorizos.jpg" alt="">  
-                    </a>       
-                </li>
-                <li class="productosComprar">
-                    <a href="./pages/productos.html">
-                        <img src="./img/chorizos.jpg" alt="">  
-                    </a>      
-                </li>
-                <li class="productosComprar">
-                    <a href="./pages/productos.html">
-                        <img src="./img/pernil.jpg" alt=""> 
-                    </a>       
-                </li>
-                <li class="productosComprar">
-                    <a href="./pages/productos.html">
-                        <img src="./img/pernil.jpg" alt=""> 
-                    </a>  
-                </li>
-                 <li class="productosComprar">
-                    <img src="./img/chorizos.jpg" alt="">     
-                </li>
-                <li class="productosComprar">
-                    <img src="./img/chorizos.jpg" alt="">     
-                </li>
-                <li class="productosComprar">
-                    <img src="./img/chorizos.jpg" alt="">
-                </li> 
-            </ul>
+            <div class="products__container--cards">              
+                <ul id="prodList" class="products__gallery">
+                </ul>
+            </div>   
         </div>
-    </section>-->
+    </section>
 
     <!-- DIV EMPTY/BACKGROUND -->
-    <div class="empty2"></div>
+    <div class="empty3"></div>
 
     <!-- SECTION GALERIA -->
-    <section class="section section__gallery">
+    <section id="galeria" class="section section__gallery">
         <h2>GALERIA</h2>        
         <div class="main__artist">
         <div class="work__gallery">
@@ -139,19 +95,129 @@
         </div>      
     </section>
 
-    <!-- DIV EMPTY/BACKGROUND -->
-    <div class="empty3"></div>
-
     <!-- SECTION CONTACT -->
+    <section id="contacto" class="contact">
+        <h2 class="section__title">
+            Contactanos 
+        </h2>
+        <div class="contact__grid">
+            <form class="contact__form" id="form"  method="POST" onsubmit="formSend()">
+                <ul class="form__grid">
+                    <li id="nameForm" class="form--item">
+                        <div>
+                            <label class="form--label">Nombre</label>
+                        </div>
+                        <div>
+                            <input type="text" id="nameForm" name="name" class="form--text" required>
+                        </div>
+                    </li>
 
+                    <li id="lastNameForm" class="form--item">
+                        <div>
+                            <label class="form--label">Apellido</label>
+                        </div>
+                        <div>  
+                            <input type="text" id="lastName" name="Last Name" class="form--text" required>
+                        </div>
+                    </li>
+
+                    <li id="emailForm" class="form--item">
+                        <div>
+                            <label class="form--label">Correo electrónico</label>
+                        </div>
+                        <div>
+                            <input type="text" id="email" name="e-mail" class="form--text" required>
+                        </div>
+                    </li>
+
+                    <li id="subjectForm" class="form--item">
+                        <div>
+                            <label class="form--label">Asunto</label>
+                        </div>
+                        <div>
+                            <input type="text" id="subject" name="Subject" class="form--text" required>
+                        </div>
+                    </li>
+
+                    <li id="messageForm" class="form--item">
+                        <div>
+                            <label class="form--label">Deja tu mensaje</label>
+                        </div>
+                        <div>
+                            <textarea class="form--text" id="message" name="Message" required></textarea>
+                        </div>
+                    </li>
+
+                    <li id="sendButtonForm" class="form--item">                
+                        <button class="button btn">
+                            <input type="submit" value="Enviar" id="submitBtn" class="btn--input">
+                        </button>
+                    </li>
+
+                    <li>
+                        <input type="hidden" name="_next" value="https://bernardoq.github.io/El-Timbo/"> 
+                        <input type="hidden" name="_template" value="table"> 
+                        <input type="hidden" name="_captcha" value="false">                
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </section>     
 
     <!--FOOTER-->
-    <footer class="footer">           
-    </footer>   
+    <footer class="footer">
+        <div class="footer__content">
+
+            <ul class="footer__socialMedia">
+                <li class="socialMedia__item">
+                    <a class="socialMedia__item-content a" href="">
+                        <img class="a__img" src="./img/Logos Social Media img/whatsapp.png" alt="whatsapp icon">
+                    </a>
+                </li>
+                <li class="socialMedia__item">
+                    <a class="socialMedia__item-content a" href="">
+                        <img class="a__img" src="./img/Logos Social Media img/instagram.png" alt="instagram icon">
+                    </a>
+                </li>
+                <li class="socialMedia__item">
+                    <a class="socialMedia__item-content a" href="">
+                        <img class="a__img" src="./img/Logos Social Media img/facebook.png" alt="facebook icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__rights">
+            <span></span>
+            <div >
+                <p class="rights__text">
+                    © 2023 ELTIMBO Todos los derechos reservados - by <a href="https://github.com/BernardoQ">BERQ</a>
+                </p>          
+            </div> 
+            
+            <div class="goUp">
+                <a href="#header">    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                    </svg>
+                </a> 
+            </div>
+        </div>
+
+    </footer>    
+  
 
     <!-- JAVASCRIPT -->
+
+    <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-    <script src="./js/main.js"></script>
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="./js/galeriaProductos.js"></script>
+    <script src="./js/tienda.js"></script>
+    <script src="./js/log.js"></script>
 </body>
 </html>

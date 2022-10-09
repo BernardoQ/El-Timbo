@@ -25,18 +25,18 @@
                 </li>
                 <li class="">
                     <a href="../index.html#galeria">Galeria</a>
-                </li>
+                </li>                
                 <li class="">
                     <a href="../index.html#contacto">Contacto</a>
                 </li>
                 <li class="">
-                    <a href="./tienda.html">Tienda</a>
+                    <a href="../pages/tienda.html">Tienda</a>
                 </li>
                 <li class="carritoHover">
                     <div id="totalEnHeader"></div>             
                 </li>
                 <li>
-                    <a href="./log.html">
+                    <a href="../pages/log.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         </svg>
@@ -46,46 +46,45 @@
         </div>
     </header>
 
-    <!-- SECTION USUARIO -->
-    <div id="contacto" class="log">
-        <div id="container">
-            <div id="tabs">
-                <p id="lt" class="tabs" onclick="loginTabFun()">Log in</p>
-                <p id="rt" class="tabs" onclick="regTabFun()">Registrarse</p>
-    
-                <div id="clear"></div>
-            </div>
-                <form class="contact__form" id="form"  action="https://formsubmit.co/a4445ce9a15f1235e8ddae671c6c47f6" method="POST" onsubmit="formSend()">
-                <div id="cont">
-                    <div id="login" class="comm">
-                        <h3>Sign in</h3>
-        
-                        <input id="se" type="email" placeholder="Email" required/>
-                        <input id="sp" type="password" placeholder="Password" required/>
-                        <input type="submit" onclick="login()" value="Submit"/>
-        
-                        <p onclick="forTabFun()">Olvidaste tu contraseña?</p>
-                    </div>
-                    <div id="register" class="comm">
-                        <h3>Register</h3>
-        
-                        <input id="re" type="email" placeholder="Email" required/>
-                        <input id="rp" type="password" placeholder="Password" required/>
-                        <input id="rrp" type="password" placeholder="Re write Password" required/>
-                        <input type="submit" onclick="register()" value="Submit"/>
-        
-                    </div >
-                    <div id="forgot" class="comm">
-                    <h3>Olvide mi Contraseña</h3>
-                    <div>
-                        <input id="fe" type="email" placeholder="Email" required/>
-                        <input type="submit" onclick="forgot()" value="Submit"/>
-                    </div>
-                    </div>
-                </div>
-            </form>
+    <!-- SECTION PRODUCTOS -->
+    <section class="section__products">
+        <h2>PRODUCTOS</h2>
+        <div class="products__container">
+            <h3>Productos</h3>
+            <div class="products__container--cards">              
+                <ul id="prodList" class="products__gallery">
+                </ul>
+            </div>   
         </div>
-    </div>
+    </section>
+
+    <!-- SECTION PRODUCTOS -->
+    <div id="carrito">
+        <table id="contenidoCarrito" >
+            <thead>
+                <tr class="carritoHeader">
+                    <th class="carritoHeader__titulos" id="imgProducto"><strong>Imagen</strong></th>
+                    <th class="carritoHeader__titulos" id="producto"><strong> Producto</strong></th>
+                    <th class="carritoHeader__titulos" id="precio"><strong> Precio Unid</strong></th>
+                    <th class="carritoHeader__titulos" id="cantidad"><strong>Cantidad</strong></th>
+                    <th class="carritoHeader__titulos" id="precio"><strong>Precio Total</strong></th>
+                </tr>                  
+            </thead>  
+
+            <tbody id="carrito_tr"></tbody>
+
+            <tfoot>
+                <tr class="carritoFooter">
+                    <th><strong>Total</strong>
+                        <td id="total"></td>
+                    </th>
+                </tr>                   
+                <tr>
+                    <td id="carrito__footer"class="mensaje" colspan = 4></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div> 
     
     <!--FOOTER-->
     <footer class="footer">
@@ -127,13 +126,13 @@
             </div>
         </div>
 
-    </footer>     
+    </footer>   
 
     <!-- JAVASCRIPT -->
     
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    
+
     <!-- TOASTIFY -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 

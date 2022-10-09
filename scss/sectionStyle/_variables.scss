@@ -1,4 +1,12 @@
+$h1: 6rem;
+$h2: 4rem;
+$h3: 2rem;
 
+$brandColorOne: #192436;
+$brandColorTwo: #AE9A64;
+$textColorOne: white;
+$menuFontcolor: black;
+$white: white;
 
 %background{
     background-repeat: no-repeat;
@@ -7,36 +15,52 @@
     background-attachment: fixed;
 }
 
-$brandColorOne: #192436;
-$headerColor: #AE9A64;
+%btn1{
+   background-color: $brandColorOne;
+   color: $brandColorTwo;
+   border-radius: 5px;
+}
 
-$white: white;
+%btn2{
+    background-color: $brandColorTwo;
+    color: $brandColorOne;
+    border-radius: 5px;
+ }
+
+@mixin brandLogo{
+    width: 25rem;
+    height: auto;
+}
+
+@mixin menuItemHover{
+    transform: scale(1.2);    
+    transition: ease-out 0.3s;
+}
+
+@mixin menuAhover{
+    transform: scale(5.2);    
+    transition: ease-out 0.2s;
+    color: $brandColorTwo;
+}
+
+@mixin menuAstyle{
+    color: $menuFontcolor;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+%sectionTitle{
+    //font-family: 'Ropa Soft Pro', serif;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    font-size: $h2;
+    color: $brandColorTwo;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+}
 
 %mainSection{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     margin: auto;
-    background-color: white;
-
-    .main__artist{
-        margin:auto;
-        text-align: center;
-        margin-bottom: 5rem;
-
-        img{
-            height: 20rem;
-            width: auto;        
-            border-radius: 15px;
-        }
-
-        .profile--contact{
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .artist__card--info{
-            text-align: center;
-        } 
-    }
 }

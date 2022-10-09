@@ -5,6 +5,8 @@
 @import './sectionStyle/sectionWelcome';
 @import './sectionStyle/sectionGallery';
 @import './sectionStyle/log';
+@import './sectionStyle/carrito';
+@import './sectionStyle/contactForm';
 
 *{
     padding: 0;
@@ -22,31 +24,22 @@ ul{
     padding: 0;
 }
 
-body{    
-    background: url("../img/chorizos.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    /* background-position: top center; */
-    @extend %background;
-    background-color: $brandColorOne;
-}
-
 h1{
     text-align: center;
     justify-items: center;
     align-items: center;
     font-size: 6rem;
-    color: white;
+    color: $brandColorTwo;
+    text-shadow: 2px 1px 2px $brandColorOne;
     margin: auto;
+    padding-top: 15%;
 }
 
 h2{
     text-align: center;
     justify-items: center;
     font-size: 4rem;
-    margin: 2rem auto;
+    margin: auto;
 }
 
 h3{
@@ -56,29 +49,40 @@ h3{
 }
 
 
+.empty1Background{
+    background-image: url("../img/brandBck2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @extend %background;
+    height: 50rem;
+}
+
 .empty1{
     height: 50rem;
     background-color: none;
-    margin: auto;
     padding-top: 5rem;
 }
 
 .empty2{
-    background-image: url("../img/sandwich.jpg");
-    background-repeat: no-repeat;
-    background-color: black;
-    backdrop-filter: blur(15px);
-    /* background-position: top center; */
+    background-image: url("../img/empty2.jpg");
+    height: 30rem;  
+    width: 100%;  
     @extend %background;
-    height: 30rem;
+    background-color: black;
+
+        h2{
+            color: $brandColorTwo;
+            margin-top: 0;
+            padding-top: 10%;
+        }
 }
 
 .empty3{
-    height: 30rem;
-    background-color: none;    
-    background-image: url("");
+    background-image: url("../img/sandwich.jpg");
+    background-color: black;
+    backdrop-filter: blur(15px);
     @extend %background;
-    background-color: #192436;
+    height: 30rem;
 }
 
 .section{
@@ -86,7 +90,6 @@ h3{
     grid-template-columns: 1fr;
     justify-content: center;
     margin: auto;
-    background-color: white;
 }
 
 .socialMedia__icon img{
