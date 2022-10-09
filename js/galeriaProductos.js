@@ -1,7 +1,7 @@
 
 const containerDiv = document.querySelector(".products__gallery");
 
-fetch("./destacados.json")
+fetch("destacados.json")
 .then((response)=> response.json())
 .then((datos)=> {
         //FUNCION CREAR CARDS DE PRODUCTOS
@@ -9,7 +9,7 @@ fetch("./destacados.json")
             datos.forEach(element=>{
                 containerDiv.innerHTML +=         
                 `<li class="cards">
-                    <img src="${element.img}" alt="${element.name}">
+                    <a href="./pages/tienda.html"><img src="${element.img}" alt="${element.name}"></a>
                     <div class="agregarProducto">
                         <p>${element.name}</p>      
                     </div>
