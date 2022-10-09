@@ -4,7 +4,6 @@ const containerDiv = document.querySelector(".products__gallery");
 fetch("../data.json")
 .then((response)=> response.json())
 .then((datos)=> {
-    console.log(".");
         //FUNCION CREAR CARDS DE PRODUCTOS
         function crearCards(){
             datos.forEach(element=>{
