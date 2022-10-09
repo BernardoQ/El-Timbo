@@ -1,6 +1,6 @@
 [
-    {"name": "Chorizo ahumado", "price": 550, "id":"prod2", "img": "./img/chorizos.jpg"},
-    {"name": "Pernil mediano", "price": 4550, "id":"prod6", "img":"./img/pernil.jpg"},
-    {"name": "Salame picado grueso", "price": 850, "id":"prod8", "img": "./img/salamin.jpg"}
+    {"name": "Chorizo ahumado", "price": 550, "id":"prod2", "img": "./img/Productos/chorizos.jpg"},
+    {"name": "Pernil mediano", "price": 4550, "id":"prod6", "img":"./img/Productos/pernil.jpg"},
+    {"name": "Salame picado grueso", "price": 850, "id":"prod8", "img": "./img/Productos/salamin.jpg"}
     
 ]

@@ -292,16 +292,16 @@
 .section__gallery {
   background-color: #AE9A64;
   color: #192436; }
-  .section__gallery .work__gallery {
+  .section__gallery .galeria__div--contenido {
     margin-top: 4rem; }
-    .section__gallery .work__gallery .work__gallery--img {
+    .section__gallery .galeria__div--contenido .contenido--img {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.2rem;
       justify-content: space-around;
       justify-items: center;
       margin: 1rem auto 3rem auto; }
-      .section__gallery .work__gallery .work__gallery--img img {
+      .section__gallery .galeria__div--contenido .contenido--img img {
         width: 25rem;
         height: 20rem;
         border-radius: 15px; }

@@ -5,10 +5,10 @@
     background-color: $brandColorTwo;
     color: $brandColorOne;
     
-    .work__gallery{
+    .galeria__div--contenido{
         margin-top: 4rem;
     
-        .work__gallery--img{
+        .contenido--img{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0.2rem;

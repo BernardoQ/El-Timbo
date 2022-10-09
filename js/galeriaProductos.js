@@ -1,4 +1,4 @@
-
+// PRODUCTOS DESTACADOS
 const containerDiv = document.querySelector(".products__gallery");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -20,6 +20,28 @@ fetch("destacados.json")
         crearCards(datos); 
     }
 );
+
+
+// GALERIA
+const containerGaleria = document.querySelector(".contenido--img");
+
+fetch("galeria.json")
+.then((response)=> response.json())
+.then((datos)=> {
+        //FUNCION CREAR CARDS DE PRODUCTOS
+        function crearCards(){
+            datos.forEach(element=>{
+                containerGaleria.innerHTML +=         
+                `<li class="cards">
+                    <a href="./pages/tienda.html"><img src="${element.img}" alt="${element.name}"></a>
+                </li>`
+            })            
+        };    
+        crearCards(datos); 
+    }
+);
+
+
 
 //PINTAR CARRITO EN HEADER
 carrito.length === 0 ? (totalEnHeader.innerHTML = `<a href="./pages/tienda.html"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
