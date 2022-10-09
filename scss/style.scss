@@ -1,12 +1,12 @@
 
-@import './sectionStyle/variables';
-@import './sectionStyle/headerFooter';
-@import './sectionStyle/sectionProducts';
-@import './sectionStyle/sectionWelcome';
-@import './sectionStyle/sectionGallery';
-@import './sectionStyle/log';
-@import './sectionStyle/carrito';
-@import './sectionStyle/contactForm';
+@import './globalScss/variables';
+@import './globalScss/headerFooter';
+@import './tiendaScss/sectionProducts';
+@import './indexScss/sectionWelcome';
+@import './indexScss/sectionGallery';
+@import './logScss/log';
+@import './tiendaScss/carrito';
+@import './indexScss/contactForm';
 
 *{
     padding: 0;

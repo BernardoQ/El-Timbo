@@ -5,7 +5,7 @@ const totalContainer = document.getElementById("total");
 const totalEnHeader = document.getElementById("totalEnHeader");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-fetch("../data.json")
+fetch("./data.json")
 .then((response)=> response.json())
 .then((datos)=> {
         //FUNCION CREAR CARDS DE PRODUCTOS
