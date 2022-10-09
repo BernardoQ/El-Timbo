@@ -5,7 +5,7 @@ const totalContainer = document.getElementById("total");
 const totalEnHeader = document.getElementById("totalEnHeader");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-fetch("./data.json")
+/*fetch("./data.json")
 .then((response)=> response.json())
 .then((datos)=> {
         //FUNCION CREAR CARDS DE PRODUCTOS
@@ -49,9 +49,9 @@ fetch("./data.json")
         };
     }
 
-);
+);*/
 
-/*const respuesta = async ()=>{
+const respuesta = async ()=>{
     const response = await fetch("../data.json");
     const data = await response.json();
 
@@ -85,8 +85,8 @@ fetch("./data.json")
                     gravity: "bottom", // `top` or `bottom`
                     position: "right", // `left`, `center` or `right`
                     style: {
-                    color: "#ffffff",
-                    background: "#192436",
+                    color: "#192436",
+                    background: "#AE9A64",
                     },
                 }).showToast();
             })
@@ -95,7 +95,7 @@ fetch("./data.json")
     crearCards();
 };
 
-respuesta();*/
+respuesta();
 
 //FUNCION AGREGAR PRODUCTO AL CARRITO
 function agregarAlCarrito(producto){
