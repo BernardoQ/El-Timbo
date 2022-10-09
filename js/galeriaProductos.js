@@ -1,7 +1,7 @@
 
 const containerDiv = document.querySelector(".products__gallery");
 
-fetch("./data.json")
+fetch("../data.json")
 .then((response)=> response.json())
 .then((datos)=> {
     console.log(".");
@@ -16,11 +16,10 @@ fetch("./data.json")
                     </div>
                 </li>`
             })            
-        };
-        crearCards(datos);
+        };    
+        crearCards(datos); 
     }
 );
-
 
 
 
