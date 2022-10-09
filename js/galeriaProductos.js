@@ -1,8 +1,7 @@
 
 const containerDiv = document.querySelector(".products__gallery");
-let dataJson = "./data.json"
 
-fetch(dataJson)
+fetch("./data.json")
 .then((response)=> response.json())
 .then((datos)=> {
     console.log(".");
