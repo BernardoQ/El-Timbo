@@ -1,3 +1,5 @@
+const { contentType } = require("mime-types");
+
 const emailArray=[];
 const passwordArray=[];
 
@@ -27,33 +29,50 @@ function register(){
     const passwordRetype = document.getElementById("rrp").value;
 
     if (email == ""){
-        swal.fire("Email requerido");
+        Swal.fire(
+            "Email requerido",
+            "error",
+        );
         return ;
     }
     else if (password == ""){
-        alert("Password requerido");
+        Swal.fire(
+            "Password requerido",
+            "error",
+        );
         return ;
     }
     else if (passwordRetype == ""){
-        alert("Password requerido");
+        Swal.fire(
+            "Password requerido",
+            "error",
+        );
         return ;
     }
     else if ( password != passwordRetype ){
-        alert("La contraseña no coincide");
+        Swal.fire(
+            "La contraseña no coincide",
+            "error",
+        );
         return;
     }
     else if(emailArray.indexOf(email) == -1){
         emailArray.push(email);
         passwordArray.push(password);
-
-        alert(email + "  Gracias por registrarte. \nAhora puedes iniciar sesion");
-
+        Swal.fire(
+            (email + "  Gracias por registrarte. \nAhora puedes iniciar sesion"),
+            "success",
+        );
+       
         document.getElementById("re").value ="";
         document.getElementById("rp").value="";
         document.getElementById("rrp").value="";
     }
     else{
-        alert(email + " ya esta registrado.");
+        Swal.fire(
+            (email + " ya esta registrado."),
+            "warning",
+        );
         return ;
     }
 }
@@ -69,22 +88,37 @@ function login(){
 
     if(emailArray.indexOf(email) == -1){
         if (email == ""){
-            alert("Email requerido.");
+            Swal.fire(
+                "Email requerido",
+                "error",
+            );
             return ;
         }
-        alert("Email no existe.");
+        Swal.fire(
+            "Email no existe",
+            "error",
+        );
         return ;
     }
     else if(passwordArray[i] != password){
         if (password == ""){
-            alert("Contraseña requerida.");
+            Swal.fire(
+                "Contraseña requerida.",
+                "error",
+            );
             return ;
         }
-        alert("La contraseña no coincide.");
+        Swal.fire(
+            "La contraseña no coincide.",
+            "error",
+        );
         return ;
     }
     else {
-        alert(email + " ahora estas logeado \n Bienvenido!");
+        Swal.fire(
+            (" Bienvenido! \n " + email),
+            "success",
+        );
 
         document.getElementById("se").value ="";
         document.getElementById("sp").value="";
@@ -101,14 +135,20 @@ function forgot(){
 
     if(emailArray.indexOf(email) == -1){
         if (email == ""){
-            alert("Email requerido.");
+            Swal.fire(
+                "Email requerido",
+                "error",
+            );
             return ;
         }
-        alert("El Email no existe.");
+        Swal.fire(
+            "Email no existe",
+            "error",
+        );
         return ;
     }
 
-    alert("te enviamos un email, estara activo por 24hs. \n Gracias");
+    Swal.fire("te enviamos un email, estara activo por 24hs. \n Gracias");
     document.getElementById("fe").value ="";
 }
 
@@ -116,9 +156,9 @@ function forgot(){
 
 
 //PINTAR CARRITO EN HEADER
-carrito.length === 0 ? (totalEnHeader.innerHTML = `<a href="./pages/tienda.html"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+carrito.length === 0 ? (totalEnHeader.innerHTML = `<a href="../pages/tienda.html"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-</svg></a>`) : (totalEnHeader.innerHTML = `<a href="./pages/tienda.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+</svg></a>`) : (totalEnHeader.innerHTML = `<a href="../pages/tienda.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg></a>`);
 

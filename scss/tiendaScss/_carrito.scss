@@ -1,74 +1,65 @@
 @import '../globalScss/variables';
 
-#carrito{
-    //display: none;
-    width:35rem;
-    height: 20rem;
+.pushbarCarrito{
+  width:fit-content !important;
+  height:fit-content !important;  
+  border-radius: 5px;
+
+  #carrito{
+    border: ridge $brandColorOne;
+    height: 80vh;
     overflow-y: scroll;
-    justify-content: center;
     font-size: 1rem;
-    padding-left: 1rem;
-    //margin-top: 2rem;
     color: $brandColorOne;
     background-color: $brandColorTwo;
-  
-    #carrito_tr::-webkit-scrollbar{
-      height: 4rem;
-    }
-  }
-  
-  #carrito_tr{
-    border: ridge $brandColorOne;
-      tr{
-        border: ridge $brandColorOne;
-      }
-  }
-  
-  .carritoHover:hover{
-    #carrito{
-      display: block;
-    }
-  }
-  
-  .carritoHeader{
-    text-align: center;
-      .carritoHeader__titulos{
-        padding: 0rem 1rem;
-      }
-  }
-  
-  #contenidoCarrito{
-    text-align: center;
-  }
-  
-  .btnProductos{
-    width:max-content;
-  }
-  
-  .btnCarritoUno{
-    width: 1.5rem;
-  }
-  
-  .carritoFooter{
-    vertical-align: top;
-    //padding-top: 2rem;
-  }
-  
-  .carrito__img{
-    img{
-      width: 4rem;
-      height: 3.5rem;
-    }
-  }
-  
-  #totalCarritoHeader{
-    margin-bottom: 0.2rem;
-  }
 
-  .boton.click{
-    @extend %btn2;
-  }
+    #contenidoCarrito{
+      text-align: center;
 
-  .btnCarrito{
-    @extend %btn1;
+      #carrito_tr{    
+        tr{
+          border: ridge $brandColorOne;
+
+          .carrito__img{
+            img{
+              width: 4rem;
+              height: 3.5rem;
+            }
+          }
+        }
+      
+        .btnProductos{
+          width:max-content;
+
+          .btnCarritoUno{
+            width: 1.5rem;
+          }
+        }    
+      }
+    }
   }
+}
+  
+.carritoHeader{
+  text-align: center;
+    .carritoHeader__titulos{
+      padding: 0rem 1rem;
+    }
+}
+
+
+.carritoFooter{
+  vertical-align: top;
+}
+
+#totalCarritoHeader{
+  margin-bottom: 0.2rem;
+}
+
+.boton.click{
+  @extend %btn2;
+}
+
+.btnCarrito{
+  @extend %btn1;
+}
