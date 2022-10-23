@@ -7,7 +7,7 @@
 
   #carrito{
     border: ridge $brandColorOne;
-    height: 80vh;
+    height: fit-content;
     overflow-y: scroll;
     font-size: 1rem;
     color: $brandColorOne;

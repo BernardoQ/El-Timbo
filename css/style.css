@@ -373,7 +373,7 @@
   border-radius: 5px; }
   .pushbarCarrito #carrito {
     border: ridge #192436;
-    height: 80vh;
+    height: fit-content;
     overflow-y: scroll;
     font-size: 1rem;
     color: #192436;
@@ -621,4 +621,15 @@ h3 {
 @media (max-width: 768px) {
   .contenido--img {
     display: grid;
-    grid-template-columns: repeat(1, 1fr) !important; } }
+    grid-template-columns: repeat(1, 1fr) !important; }
+  .form__grid {
+    display: block !important; } }
+
+@media (max-width: 576px) {
+  .section__welcome {
+    height: fit-content; }
+    .section__welcome .welcome__text {
+      justify-content: center;
+      margin: auto; }
+  .carrito__img {
+    display: none; } }

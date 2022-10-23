@@ -154,10 +154,28 @@ h3{
         display: grid;
         grid-template-columns: repeat(1, 1fr) !important;
     }
+
+    .form__grid{
+       display: block !important;
+    }
 }
 
 @media (max-width: 576px){
-    
+
+    .section__welcome{
+        height: fit-content;
+
+        .welcome__text{
+            justify-content: center;
+            margin: auto;
+        }
+    }
+
+    .carrito__img{
+        display: none;
+    }
+
+
 }
 
 
