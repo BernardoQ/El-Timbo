@@ -11,39 +11,45 @@
     <title>El Timbo</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <div id="header" class="header__container">
-        <header class="header">
-            <ul class="navBar__content">
-                <li class="">
-                    <a href="">Home</a>
-                </li>
-                <li class="">
-                    <a href="#bienvenido">Nosotros</a>
-                </li>
-                <li class="">
-                    <a href="#galeria">Galeria</a>
-                </li>
-                <li class="">
-                    <a href="#contacto">Contacto</a>
-                </li>
+    <!-- HEADER -->   
+    <header>
+        <div id="header" class="header header__container container-fluid navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navBar__content">
+                    <li class="nav-item active">
+                        <a href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#bienvenido">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#galeria">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto">Contacto</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="./pages/tienda.html">Tienda</a>
+                    </li>
+                    <li class="carritoHover nav-item">
+                        <div id="totalEnHeader"></div>             
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/log.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-                <li class="">
-                    <a href="./pages/tienda.html">Tienda</a>
-                </li>
-                <li class="carritoHover">
-                    <div id="totalEnHeader"></div>             
-                </li>
-                <li>
-                    <a href="./pages/log.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </header>
-    </div>
+        </div>
+    </header>
 
     <!-- DIV EMPTY/BACKGROUND -->
     <div class="empty1Background">
