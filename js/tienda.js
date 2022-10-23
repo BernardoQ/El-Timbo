@@ -5,52 +5,6 @@ const totalContainer = document.getElementById("total");
 const totalEnHeader = document.getElementById("totalEnHeader");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-/*fetch("./data.json")
-.then((response)=> response.json())
-.then((datos)=> {
-        //FUNCION CREAR CARDS DE PRODUCTOS
-        function crearCards(){
-            datos.forEach(element=>{
-                containerDiv.innerHTML +=         
-                `<li class="cards">
-                    <img src="${element.img}" alt="${element.name}">
-                    <div class="agregarProducto">
-                        <p>${element.name}</p>
-                        <p class="producto_price">$${element.price}</p>      
-                    </div>
-                    <button class="boton click" id="btn-agregar${element.id}">Agregar</button>
-                </li>`
-            })
-            
-            agregarFuncionAlBoton();
-        };
-
-        crearCards(datos);
-
-        //FUNCION AGREGAR EVENTO A BOTON 
-        function agregarFuncionAlBoton(){
-            datos.forEach(prod=>{
-                document.querySelector(`#btn-agregar${prod.id}`).addEventListener("click",()=>{
-                    agregarAlCarrito(prod)
-    
-                //FUNCION TOASTIFY BOTON AGREGAR
-                    Toastify({
-                        text: "Producto Agregado",
-                        duration: 2000,
-                        gravity: "bottom", // `top` or `bottom`
-                        position: "right", // `left`, `center` or `right`
-                        style: {
-                        color: "#192436",
-                        background: "#AE9A64",
-                        },
-                    }).showToast();
-                })
-            })
-        };
-    }
-
-);*/
-
 const respuesta = async ()=>{
     const response = await fetch("../json/data.json");
     const data = await response.json();
