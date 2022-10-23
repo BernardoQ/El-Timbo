@@ -52,7 +52,7 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 );*/
 
 const respuesta = async ()=>{
-    const response = await fetch("../data.json");
+    const response = await fetch("../json/data.json");
     const data = await response.json();
 
     //FUNCION CREAR CARDS DE PRODUCTOS
@@ -148,7 +148,7 @@ function pintarCarrito(){
                 denyButtonText: `Seguir comprando`,
                 denyButtonColor: "#DE1F10",
               }).then((result) => {
-                result.isConfirmed === true ? Swal(location.href = './log.html') : Swal('Seguir comprando', '','info');
+                result.isConfirmed === true ? Swal(location.href = './finalizarCompra.html') : Swal('Seguir comprando', '','info');
               })
         }
         

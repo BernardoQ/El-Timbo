@@ -6,9 +6,4 @@ function formSend(){
         icon: "success",
         button: false,
         });
-}
-
-
-
-
-//action="https://formsubmit.co/a4445ce9a15f1235e8ddae671c6c47f6"
+};

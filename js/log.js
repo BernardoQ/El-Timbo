@@ -1,5 +1,3 @@
-const { contentType } = require("mime-types");
-
 const emailArray=[];
 const passwordArray=[];
 

@@ -2,7 +2,7 @@
 const containerDiv = document.querySelector(".products__gallery");
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-fetch("destacados.json")
+fetch("./json/destacados.json")
 .then((response)=> response.json())
 .then((datos)=> {
         //FUNCION CREAR CARDS DE PRODUCTOS
@@ -25,7 +25,7 @@ fetch("destacados.json")
 // GALERIA
 const containerGaleria = document.querySelector(".contenido--img");
 
-fetch("galeria.json")
+fetch("./json/galeria.json")
 .then((response)=> response.json())
 .then((datos)=> {
         //FUNCION CREAR CARDS DE PRODUCTOS
