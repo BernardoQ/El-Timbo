@@ -8,6 +8,8 @@ let forgetBox = document.getElementById("forgot");
 let loginTab = document.getElementById("lt");
 let regTab = document.getElementById("rt");
 
+const sesion = JSON.parse(localStorage.getItem("sesion")) || [];
+
 function regTabFun(){
     event.preventDefault();
 }
@@ -146,7 +148,7 @@ function forgot(){
         return ;
     }
 
-    Swal.fire("te enviamos un email, estara activo por 24hs. \n Gracias");
+    Swal.fire("te enviamos un email para recuperar tu contraseña. \n Gracias");
     document.getElementById("fe").value ="";
 }
 
