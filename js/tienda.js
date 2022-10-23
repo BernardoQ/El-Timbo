@@ -184,6 +184,18 @@ function borrarProducto(){
             let indice = carrito.findIndex(element=>element.id===prod.id);
             carrito.splice(indice,1);
             pintarCarrito()
+
+            //FUNCION TOASTIFY BOTON BORRAR
+            Toastify({
+                text: "Producto Removido",
+                duration: 2000,
+                gravity: "bottom", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                style: {
+                color: "#192436",
+                background: "#AE9A64",
+                },
+            }).showToast();
         })
     })
 };
@@ -195,6 +207,18 @@ function agregarBorrarUno(){
             let find = carrito.find(element=>element.id===prod.id);
             find.cantidad > 0 && find.cantidad--;
             pintarCarrito()
+
+                //FUNCION TOASTIFY BOTON BORRAR UNO
+                Toastify({
+                    text: "Producto Removido",
+                    duration: 2000,
+                    gravity: "bottom", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    style: {
+                    color: "#192436",
+                    background: "#AE9A64",
+                    },
+                }).showToast();
         })
     });
     
@@ -203,6 +227,18 @@ function agregarBorrarUno(){
             let find = carrito.find(element=>element.id===prod.id);
             find.cantidad++;
             pintarCarrito()
+
+                //FUNCION TOASTIFY BOTON AGREGAR UNO
+                Toastify({
+                    text: "Producto Añadido",
+                    duration: 2000,
+                    gravity: "bottom", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    style: {
+                    color: "#192436",
+                    background: "#AE9A64",
+                    },
+                }).showToast();
         })
     });
 };
