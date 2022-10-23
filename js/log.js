@@ -1,14 +1,9 @@
-const emailArray=[];
-const passwordArray=[];
-
 let loginBox = document.getElementById("login");
 let regBox = document.getElementById("register");
 let forgetBox = document.getElementById("forgot");
 
 let loginTab = document.getElementById("lt");
 let regTab = document.getElementById("rt");
-
-const sesion = JSON.parse(localStorage.getItem("sesion")) || [];
 
 function regTabFun(){
     event.preventDefault();
