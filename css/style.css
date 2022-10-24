@@ -370,7 +370,7 @@
   border-radius: 5px; }
   .pushbarCarrito #carrito {
     border: ridge #192436;
-    height: fit-content;
+    height: 80vh;
     overflow-y: scroll;
     font-size: 1rem;
     color: #192436;
@@ -466,7 +466,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "name subject" "lastName message" "email message" "sendButton sendButton"; }
+  grid-template-areas: "name subject"
+ "lastName message"
+ "email message"
+ "sendButton sendButton"; }
 
 .form--item {
   margin: 0.5rem auto 0.5rem auto;
