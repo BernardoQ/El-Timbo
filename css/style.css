@@ -100,14 +100,12 @@
         display: block;
         border-radius: 50%;
         position: relative;
-        overflow: hidden;
-        z-index: 1; }
+        overflow: hidden; }
         .footer .footer__content .footer__socialMedia .socialMedia__item-content .a__img {
           width: 2rem;
           height: 2rem;
           position: relative;
-          transition: .5s;
-          z-index: 3; }
+          transition: .5s; }
 
 .socialMedia__item-content:hover img {
   transform: rotateY(360deg); }
@@ -119,8 +117,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transition: .5s;
-  z-index: 2; }
+  transition: .5s; }
 
 .socialMedia__item-content:hover:before {
   top: 0; }
@@ -633,3 +630,6 @@ h3 {
       margin: auto; }
   .carrito__img {
     display: none; } }
+
+.pedido {
+  display: none; }

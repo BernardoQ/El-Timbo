@@ -145,7 +145,7 @@ h3{
             font-size: 2rem;
             padding: 2rem;        
           }
-      }
+    }
 }
 
 @media (max-width: 768px){
@@ -176,6 +176,10 @@ h3{
     }
 
 
+}
+
+.pedido{
+    display: none;
 }
 
 

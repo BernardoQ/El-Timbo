@@ -1,4 +1,3 @@
-
 const containerDiv = document.querySelector(".products__gallery");
 const carritoDiv = document.querySelector("#carrito_tr");
 const totalContainer = document.getElementById("total");
